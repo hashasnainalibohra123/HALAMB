@@ -1,0 +1,20 @@
+
+*{margin:0;padding:0;}
+
+.image{
+  width:109px;
+   height:100px;
+    padding:1050px; 
+    margin-top:100%;
+    background:#3399cc;
+  /*
+  display:block;
+  
+ 
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;*/
+}
