@@ -1,481 +1,486 @@
-<%@page import="com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray"%>
+<%@page
+	import="com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 <head>
-  <meta charset="utf-8"> 
-  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+<meta charset="utf-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 
-  <title>HALAMB Profiles list - HALAMB.COM</title>
-  <meta name="keywords" content="HALAMB,HALAMB.com, x videos,x video,porn,video,videos," />
-  <meta name="description" content="HALAMB HALAMB Woman Profiles list free">
-  <meta name="verify-v1" content="3Awl+ctS3GOag+hKJiSg9SQQ2MR/GwV8H/PAgMhGhcM=" />
-    
-  <meta http-equiv="pics-Label" content='(pics-1.1 "http://www.icra.org/pics/vocabularyv03/" l gen true for "http://HALAMB.com" r (n 3 s 3 v 0 l 3 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 3) gen true for "http://www.HALAMB.com" r (n 3 s 3 v 0 l 3 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 3))' />  
-  <link rel="meta" href="http://www.HALAMB.com/labels.rdf" type="application/rdf xml" title="ICRA labels" />
-  
-  <link rel="search" type="application/opensearchdescription+xml" title="HALAMB" href="/rss/rss.xml">
-  <link rel="shortcut icon" href="http://static.HALAMB.com/img/favicon_xvideos.ico">
+<title>HALAMB Profiles list - HALAMB.COM</title>
+<meta name="keywords"
+	content="HALAMB,HALAMB.com, x videos,x video,porn,video,videos," />
+<meta name="description"
+	content="HALAMB HALAMB Woman Profiles list free">
+<meta name="verify-v1"
+	content="3Awl+ctS3GOag+hKJiSg9SQQ2MR/GwV8H/PAgMhGhcM=" />
 
-    <link rel="stylesheet" href="Accounts_style.css?v=17">
-   <link rel="stylesheet" href="CSS_01.css?v=18">
-      
-  <script src="http://static.HALAMB.com/v2/js/libs/modernizr-2.6.2.min.js"></script>
-   <script type= "text/javascript" src = "countries.js"></script>
-  <script type="text/javascript">
+<meta http-equiv="pics-Label"
+	content='(pics-1.1 "http://www.icra.org/pics/vocabularyv03/" l gen true for "http://HALAMB.com" r (n 3 s 3 v 0 l 3 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 3) gen true for "http://www.HALAMB.com" r (n 3 s 3 v 0 l 3 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 3))' />
+<link rel="meta" href="http://www.HALAMB.com/labels.rdf"
+	type="application/rdf xml" title="ICRA labels" />
+
+<link rel="search" type="application/opensearchdescription+xml"
+	title="HALAMB" href="/rss/rss.xml">
+<link rel="shortcut icon"
+	href="http://static.HALAMB.com/img/favicon_xvideos.ico">
+
+<link rel="stylesheet" href="Accounts_style.css?v=17">
+<link rel="stylesheet" href="CSS_01.css?v=18">
+
+<script src="http://static.HALAMB.com/v2/js/libs/modernizr-2.6.2.min.js"></script>
+<script type="text/javascript" src="countries.js"></script>
+<script type="text/javascript">
     var master_url = "HALAMB.com";
   </script>
-  <script src="http://static.HALAMB.com/v2/js/script-head.js?v=4"></script>
-  <script src="http://static.HALAMB.com/v2/js/mobile.js"></script>
-</head><body>
-  <script type="text/javascript">
+<script src="http://static.HALAMB.com/v2/js/script-head.js?v=4"></script>
+<script src="http://static.HALAMB.com/v2/js/mobile.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
   var wpn_ad_configuration = [{"type":"footer","nb_ban":1,"div_id":"wpn_ad_footer"}], wpn_ad_site = "HALAMB", wpn_ad_category = "";
   </script>
-  <div id="page">
-    <header>
-      <div class="whiteStripe clearfix">
-        <a href="/" title="HALAMB Home" id="mainLogo">
-          <img src="http://img100.HALAMB.com/videos/thumbs/HALAMB.gif" alt="HALAMB Home" id="siteLogo" />
-         
-        </a>
-        <form action="/" method="post" id="searchForm">
-          <input type="text" name="k" value="" id="q" maxlength="2048" size="30" />
-          <input type="submit" value="Search" id="searchSubmit" />
-        </form>
-        <h2><span class="redText">HALAMB</span> <a href="/profiles">USER PROFILES</a></h2>
-      </div>
-      
-      <div class="redStripe clearfix" id="mainMenu">
-        <p>Over 3000 new free bestvideos / day</p>
-        <ul>
-          <li><a href="/">New Videos</a></li>
-          <li><a href="/best/">Best Videos</a></li>
-          <li><a href="/pornstars">Pornstars</a></li>
-          <li><a href="/channels">Channels</a></li>
-          <li><a href="/profiles">Profiles</a></li>
-          <li><a href="/tags/">Tags</a></li>
-          <li><a href="http://forum.xnxx.com/">Forum</a></li>
-          <li><a href="http://multi.xnxx.com/">bestPics</a></li>
-        </ul>
-      </div>
-      
-     
-      <%@ page import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA, java.util.ArrayList,
+	<div id="page">
+		<header>
+		<div class="whiteStripe clearfix">
+			<a href="/" title="HALAMB Home" id="mainLogo"> <img
+				src="http://img100.HALAMB.com/videos/thumbs/HALAMB.gif"
+				alt="HALAMB Home" id="siteLogo" />
+
+			</a>
+			<form action="/" method="post" id="searchForm">
+				<input type="text" name="k" value="" id="q" maxlength="2048"
+					size="30" /> <input type="submit" value="Search" id="searchSubmit" />
+			</form>
+			<h2>
+				<span class="redText">HALAMB</span> <a href="/profiles">USER
+					PROFILES</a>
+			</h2>
+		</div>
+
+		<div class="redStripe clearfix" id="mainMenu">
+			<p>Over 3000 new free bestvideos / day</p>
+			<ul>
+				<li><a href="/">New Videos</a></li>
+				<li><a href="/best/">Best Videos</a></li>
+				<li><a href="/pornstars">Pornstars</a></li>
+				<li><a href="/channels">Channels</a></li>
+				<li><a href="/profiles">Profiles</a></li>
+				<li><a href="/tags/">Tags</a></li>
+				<li><a href="http://forum.xnxx.com/">Forum</a></li>
+				<li><a href="http://multi.xnxx.com/">bestPics</a></li>
+			</ul>
+		</div>
+
+
+		<%@ page
+			import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA, java.util.ArrayList,
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
  javax.imageio.ImageIO,java.util.Formatter,java.util.Date,
  java.io.File,com.HALAMB.User_profile_pic,java.text.SimpleDateFormat,
- java.awt.image.BufferedImage;" %> 
-  
-  
-  
-  
-  
-  <title></title>
+ java.awt.image.BufferedImage;"%>
 
-			
-      
-      <div class="blackStripe clearfix" id="secondaryMenu">
-        <p>
-          <%=(String)session.getAttribute("email") %> | <a href="profiles.jsp"><b>My Profile</b></a> | <a href="UPDATE_EMAIL.jsp"><b>My account</b></a> | <a href="Logout">Log out</a>
-        </p>
-        <ul>
-                    <li><strong>6,255,486 profiles</strong></li>
-          <li>-</li>
-          <li><a href="find_friend.jsp?gender=Women"><strong>Women</strong></a></li>
-          <li>-</li>
-          <li><a href="find_friend.jsp?gender=Men">Men</a></li>
-          <li>-</li>
-          </ul>
-      </div>
-    </header>
-    
-    <div id="main">
-      
-            <div id="adProfiles">
-        <a href="profiles.jsp">Access my profile</a>
-      </div>
-      
-      <form action="find_friend.jsp" method="get" id="searchProfileForm" class="no-search ad-none">
-        <!-- Left column -->
-        <div class="column leftcol">
-          <div class="formLine form_field_keywords">
-            <label for="phrase_text">Keywords:</label>
-            <div class="content">
-              <input type="text" name="keywords" id="phrase_text" />
-            </div>
-            <div class="help"><em>Searches in profile name, city, country, description and education</em></div>
-          </div>
-          <div class="formLine">
-            <label for="sex_select">Gender:</label>
-            <div class="content">
-              <select name="gender" id="sex_select">
-                <option value=""></option>
-                                <option value=""></option> 
-                                <option value="Man">Man</option> 
-                                <option value="Woman">Woman</option> 
-                                <option value="Transvestite">Transvestite</option> 
-                                <option value="Gay man">Gay man</option> 
-                                <option value="Lesbian woman">Lesbian woman</option> 
-                                <option value="Couple">Couple</option> 
-                                <option value="Gay couple">Gay couple</option> 
-                                <option value="Lesbian couple">Lesbian couple</option> 
-                                <option value="Transexual">Transexual</option> 
-                                <option value="Transexual couple">Transexual couple</option> 
-                                <option value="Site or Company">Site or Company</option> 
-                              </select>
-            </div>
-          </div>
-          
-           
-          <div class="formLine">
-            <label for="create_date_select">Create date:</label>
-            <div class="content">
-              <select  name="create_date" id="create_date_select" value="0">
-                <option value="0"></option>
-                <option value="1" >Today</option>
-                <option value="7" >Last week</option>
-                <option value="30" >Last month</option>
-                <option value="90" >Last 3 months</option>
-              </select>
-            </div></div>
-           <div class="content">
-             <div class="formLine country">
-     
-          <label for="pays_text">Country:</label>
-          <div class="content">
-          <select name="pays_select" id="pays_select" ></select>
-           </div>
-        </div>
-        
-        <div class="formLine region">
-          <label for="region_text">Region:</label>
-          <div class="content">
-          <select name="region" id="region_select" ></select>
-           </div>
-        </div> </div>
-          <script >
+
+
+
+
+		<title></title>
+
+
+
+		<div class="blackStripe clearfix" id="secondaryMenu">
+			<p>
+				<%=(String)session.getAttribute("email") %>
+				| <a href="profiles.jsp"><b>My Profile</b></a> | <a
+					href="UPDATE_EMAIL.jsp"><b>My account</b></a> | <a href="Logout">Log
+					out</a>
+			</p>
+			<ul>
+				<li><strong>6,255,486 profiles</strong></li>
+				<li>-</li>
+				<li><a href="find_friend.jsp?gender=Women"><strong>Women</strong></a></li>
+				<li>-</li>
+				<li><a href="find_friend.jsp?gender=Men">Men</a></li>
+				<li>-</li>
+			</ul>
+		</div>
+		</header>
+
+		<div id="main">
+
+			<div id="adProfiles">
+				<a href="profiles.jsp">Access my profile</a>
+			</div>
+
+			<form action="find_friend.jsp" method="get" id="searchProfileForm"
+				class="no-search ad-none">
+				<!-- Left column -->
+				<div class="column leftcol">
+					<div class="formLine form_field_keywords">
+						<label for="phrase_text">Keywords:</label>
+						<div class="content">
+							<input type="text" name="keywords" id="phrase_text" />
+						</div>
+						<div class="help">
+							<em>Searches in profile name, city, country, description and
+								education</em>
+						</div>
+					</div>
+					<div class="formLine">
+						<label for="sex_select">Gender:</label>
+						<div class="content">
+							<select name="gender" id="sex_select">
+								<option value=""></option>
+								<option value=""></option>
+								<option value="Man">Man</option>
+								<option value="Woman">Woman</option>
+								<option value="Transvestite">Transvestite</option>
+								<option value="Gay man">Gay man</option>
+								<option value="Lesbian woman">Lesbian woman</option>
+								<option value="Couple">Couple</option>
+								<option value="Gay couple">Gay couple</option>
+								<option value="Lesbian couple">Lesbian couple</option>
+								<option value="Transexual">Transexual</option>
+								<option value="Transexual couple">Transexual couple</option>
+								<option value="Site or Company">Site or Company</option>
+							</select>
+						</div>
+					</div>
+
+
+					<div class="formLine">
+						<label for="create_date_select">Create date:</label>
+						<div class="content">
+							<select name="create_date" id="create_date_select" value="0">
+								<option value="0"></option>
+								<option value="1">Today</option>
+								<option value="7">Last week</option>
+								<option value="30">Last month</option>
+								<option value="90">Last 3 months</option>
+							</select>
+						</div>
+					</div>
+					<div class="content">
+						<div class="formLine country">
+
+							<label for="pays_text">Country:</label>
+							<div class="content">
+								<select name="pays_select" id="pays_select"></select>
+							</div>
+						</div>
+
+						<div class="formLine region">
+							<label for="region_text">Region:</label>
+							<div class="content">
+								<select name="region" id="region_select"></select>
+							</div>
+						</div>
+					</div>
+					<script>
             populateCountries("pays_select", "region_select");
             
-        </script> 
-        
-       
-          <div class="formLine">
-            <label for="relationship_select">Relationship:</label>
-            <div class="content">
-              <select name="relationship" id="relationship_select">
-                                <option value=""></option> 
-                                <option value="Single">Single</option> 
-                                <option value="Taken">Taken</option> 
-                                <option value="Open">Open</option> 
-                              </select>
-            </div>
-          </div>
-          <div class="formLine">
-            <label for="age_min_select">Age:</label>
-            <div class="content two_selects">
-              <select name="age_min" id="age_min_select">
-                <option value="0"></option>
-                <option value="5">5y</option>
-                 				 <option value="6">6y</option>
-                 				  <option value="7">7y</option>   
-                                 <option value="8">8y</option>
-                                  <option value="9">9y</option>
-                                   <option value="10">10y</option>
-                                    <option value="11">11y</option>
-                                     <option value="12">12y</option>
-                                      <option value="13">13y</option>
-                                       <option value="14">14y</option>
-                                        <option value="15">15y</option>
-                                         <option value="16">16y</option>
-                                          <option value="17">17y</option>   
-                                <option value="18">18y</option> 
-                                <option value="19">19y</option> 
-                                <option value="20">20y</option> 
-                                <option value="21">21y</option> 
-                                <option value="22">22y</option> 
-                                <option value="23">23y</option> 
-                                <option value="24">24y</option> 
-                                <option value="25">25y</option> 
-                                <option value="26">26y</option> 
-                                <option value="27">27y</option> 
-                                <option value="28">28y</option> 
-                                <option value="29">29y</option> 
-                                <option value="30">30y</option> 
-                                <option value="31">31y</option> 
-                                <option value="32">32y</option> 
-                                <option value="33">33y</option> 
-                                <option value="34">34y</option> 
-                                <option value="35">35y</option> 
-                                <option value="36">36y</option> 
-                                <option value="37">37y</option> 
-                                <option value="38">38y</option> 
-                                <option value="39">39y</option> 
-                                <option value="40">40y</option> 
-                                <option value="41">41y</option> 
-                                <option value="42">42y</option> 
-                                <option value="43">43y</option> 
-                                <option value="44">44y</option> 
-                                <option value="45">45y</option> 
-                                <option value="46">46y</option> 
-                                <option value="47">47y</option> 
-                                <option value="48">48y</option> 
-                                <option value="49">49y</option> 
-                                <option value="50">50y</option> 
-                                <option value="51">51y</option> 
-                                <option value="52">52y</option> 
-                                <option value="53">53y</option> 
-                                <option value="54">54y</option> 
-                                <option value="55">55y</option> 
-                                <option value="56">56y</option> 
-                                <option value="57">57y</option> 
-                                <option value="58">58y</option> 
-                                <option value="59">59y</option> 
-                                <option value="60">60y</option> 
-                                <option value="61">61y</option> 
-                                <option value="62">62y</option> 
-                                <option value="63">63y</option> 
-                                <option value="64">64y</option> 
-                                <option value="65">65y</option> 
-                                <option value="66">66y</option> 
-                                <option value="67">67y</option> 
-                                <option value="68">68y</option> 
-                                <option value="69">69y</option> 
-                                <option value="70">70y</option> 
-                                <option value="71">71y</option> 
-                                <option value="72">72y</option> 
-                                <option value="73">73y</option> 
-                                <option value="74">74y</option> 
-                                <option value="75">75y</option> 
-                                <option value="76">76y</option> 
-                                <option value="77">77y</option> 
-                                <option value="78">78y</option> 
-                                <option value="79">79y</option> 
-                                <option value="80">80y</option> 
-                                <option value="81">81y</option> 
-                                <option value="82">82y</option> 
-                                <option value="83">83y</option> 
-                                <option value="84">84y</option> 
-                                <option value="85">85y</option> 
-                                <option value="86">86y</option> 
-                                <option value="87">87y</option> 
-                                <option value="88">88y</option> 
-                                <option value="89">89y</option> 
-                                <option value="90">90y</option> 
-                                <option value="91">91y</option> 
-                                <option value="92">92y</option> 
-                                <option value="93">93y</option> 
-                                <option value="94">94y</option> 
-                                <option value="95">95y</option> 
-                                <option value="96">96y</option> 
-                                <option value="97">97y</option> 
-                                <option value="98">98y</option> 
-                                <option value="99">99y</option> 
-                                <option value="100">100y</option> 
-                                <option value="101">101y</option> 
-                                <option value="102">102y</option> 
-                                <option value="103">103y</option> 
-                                <option value="104">104y</option> 
-                                <option value="105">105y</option> 
-                                <option value="106">106y</option> 
-                                <option value="107">107y</option> 
-                                <option value="108">108y</option> 
-                                <option value="109">109y</option> 
-                                <option value="110">110y</option> 
-                                <option value="111">111y</option> 
-                                <option value="112">112y</option> 
-                                <option value="113">113y</option> 
-                                <option value="114">114y</option> 
-                                <option value="115">115y</option> 
-                                <option value="116">116y</option> 
-                                <option value="117">117y</option> 
-                                <option value="118">118y</option> 
-                                <option value="119">119y</option> 
-                                <option value="120">120y</option> 
-                              </select>
-              
-              <select name="age_max" id="age_max_select">
-                <option value="0"></option>
-                 				<option value="5">5y</option>
-                 				 <option value="6">6y</option>
-                 				  <option value="7">7y</option>   
-                                 <option value="8">8y</option>
-                                  <option value="9">9y</option>
-                                   <option value="10">10y</option>
-                                    <option value="11">11y</option>
-                                     <option value="12">12y</option>
-                                      <option value="13">13y</option>
-                                       <option value="14">14y</option>
-                                        <option value="15">15y</option>
-                                         <option value="16">16y</option>
-                                          <option value="17">17y</option>         
-                                   <option value="18">18y</option> 
-                                <option value="19">19y</option> 
-                                <option value="20">20y</option> 
-                                <option value="21">21y</option> 
-                                <option value="22">22y</option> 
-                                <option value="23">23y</option> 
-                                <option value="24">24y</option> 
-                                <option value="25">25y</option> 
-                                <option value="26">26y</option> 
-                                <option value="27">27y</option> 
-                                <option value="28">28y</option> 
-                                <option value="29">29y</option> 
-                                <option value="30">30y</option> 
-                                <option value="31">31y</option> 
-                                <option value="32">32y</option> 
-                                <option value="33">33y</option> 
-                                <option value="34">34y</option> 
-                                <option value="35">35y</option> 
-                                <option value="36">36y</option> 
-                                <option value="37">37y</option> 
-                                <option value="38">38y</option> 
-                                <option value="39">39y</option> 
-                                <option value="40">40y</option> 
-                                <option value="41">41y</option> 
-                                <option value="42">42y</option> 
-                                <option value="43">43y</option> 
-                                <option value="44">44y</option> 
-                                <option value="45">45y</option> 
-                                <option value="46">46y</option> 
-                                <option value="47">47y</option> 
-                                <option value="48">48y</option> 
-                                <option value="49">49y</option> 
-                                <option value="50">50y</option> 
-                                <option value="51">51y</option> 
-                                <option value="52">52y</option> 
-                                <option value="53">53y</option> 
-                                <option value="54">54y</option> 
-                                <option value="55">55y</option> 
-                                <option value="56">56y</option> 
-                                <option value="57">57y</option> 
-                                <option value="58">58y</option> 
-                                <option value="59">59y</option> 
-                                <option value="60">60y</option> 
-                                <option value="61">61y</option> 
-                                <option value="62">62y</option> 
-                                <option value="63">63y</option> 
-                                <option value="64">64y</option> 
-                                <option value="65">65y</option> 
-                                <option value="66">66y</option> 
-                                <option value="67">67y</option> 
-                                <option value="68">68y</option> 
-                                <option value="69">69y</option> 
-                                <option value="70">70y</option> 
-                                <option value="71">71y</option> 
-                                <option value="72">72y</option> 
-                                <option value="73">73y</option> 
-                                <option value="74">74y</option> 
-                                <option value="75">75y</option> 
-                                <option value="76">76y</option> 
-                                <option value="77">77y</option> 
-                                <option value="78">78y</option> 
-                                <option value="79">79y</option> 
-                                <option value="80">80y</option> 
-                                <option value="81">81y</option> 
-                                <option value="82">82y</option> 
-                                <option value="83">83y</option> 
-                                <option value="84">84y</option> 
-                                <option value="85">85y</option> 
-                                <option value="86">86y</option> 
-                                <option value="87">87y</option> 
-                                <option value="88">88y</option> 
-                                <option value="89">89y</option> 
-                                <option value="90">90y</option> 
-                                <option value="91">91y</option> 
-                                <option value="92">92y</option> 
-                                <option value="93">93y</option> 
-                                <option value="94">94y</option> 
-                                <option value="95">95y</option> 
-                                <option value="96">96y</option> 
-                                <option value="97">97y</option> 
-                                <option value="98">98y</option> 
-                                <option value="99">99y</option> 
-                                <option value="100">100y</option> 
-                                <option value="101">101y</option> 
-                                <option value="102">102y</option> 
-                                <option value="103">103y</option> 
-                                <option value="104">104y</option> 
-                                <option value="105">105y</option> 
-                                <option value="106">106y</option> 
-                                <option value="107">107y</option> 
-                                <option value="108">108y</option> 
-                                <option value="109">109y</option> 
-                                <option value="110">110y</option> 
-                                <option value="111">111y</option> 
-                                <option value="112">112y</option> 
-                                <option value="113">113y</option> 
-                                <option value="114">114y</option> 
-                                <option value="115">115y</option> 
-                                <option value="116">116y</option> 
-                                <option value="117">117y</option> 
-                                <option value="118">118y</option> 
-                                <option value="119">119y</option> 
-                                <option value="120">120y</option> 
-                              </select>
-            </div>
-          </div>
-        
-        <div class="formActions">
-          <input type="submit" value="Search profiles" />
-          <input type="submit" name="_advanced_search" value="Advanced search" class="advanced" />
-          <strong>Order by</strong>
-          <input type="radio" name="orderby" id="orderby_relevance" value="relevance" checked="checked" />
-          <label for="orderby_relevance">Relevance</label>
-          <input type="radio" name="orderby" id="orderby_hits" value="hits" />
-          <label for="orderby_hits">Hits</label>
-          <input type="radio" name="orderby" id="orderby_votes" value="votes" />
-          <label for="orderby_votes">Votes</label>
-        </div></div>
-      </form>
-            
-      <!-- PAGINATION -->
-            <div class="pagination">
-        <ul>
-                              <li>
-                        <a class="sel">1</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/1">2</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/2">3</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/3">4</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/4">5</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/5">6</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/6">7</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/7">8</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/8">9</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/9">10</a>
-                      </li>
-                              <li><a class="nP" href="/profiles/1">Next</a></li>
-                  </ul>
-      </div>
-            <!-- END PAGINATION -->
-   <div id="profilesList" class="profilesGalleries">
-      <%ArrayList user = null,user1 = null;
+        </script>
+
+
+					<div class="formLine">
+						<label for="relationship_select">Relationship:</label>
+						<div class="content">
+							<select name="relationship" id="relationship_select">
+								<option value=""></option>
+								<option value="Single">Single</option>
+								<option value="Taken">Taken</option>
+								<option value="Open">Open</option>
+							</select>
+						</div>
+					</div>
+					<div class="formLine">
+						<label for="age_min_select">Age:</label>
+						<div class="content two_selects">
+							<select name="age_min" id="age_min_select">
+								<option value="0"></option>
+								<option value="5">5y</option>
+								<option value="6">6y</option>
+								<option value="7">7y</option>
+								<option value="8">8y</option>
+								<option value="9">9y</option>
+								<option value="10">10y</option>
+								<option value="11">11y</option>
+								<option value="12">12y</option>
+								<option value="13">13y</option>
+								<option value="14">14y</option>
+								<option value="15">15y</option>
+								<option value="16">16y</option>
+								<option value="17">17y</option>
+								<option value="18">18y</option>
+								<option value="19">19y</option>
+								<option value="20">20y</option>
+								<option value="21">21y</option>
+								<option value="22">22y</option>
+								<option value="23">23y</option>
+								<option value="24">24y</option>
+								<option value="25">25y</option>
+								<option value="26">26y</option>
+								<option value="27">27y</option>
+								<option value="28">28y</option>
+								<option value="29">29y</option>
+								<option value="30">30y</option>
+								<option value="31">31y</option>
+								<option value="32">32y</option>
+								<option value="33">33y</option>
+								<option value="34">34y</option>
+								<option value="35">35y</option>
+								<option value="36">36y</option>
+								<option value="37">37y</option>
+								<option value="38">38y</option>
+								<option value="39">39y</option>
+								<option value="40">40y</option>
+								<option value="41">41y</option>
+								<option value="42">42y</option>
+								<option value="43">43y</option>
+								<option value="44">44y</option>
+								<option value="45">45y</option>
+								<option value="46">46y</option>
+								<option value="47">47y</option>
+								<option value="48">48y</option>
+								<option value="49">49y</option>
+								<option value="50">50y</option>
+								<option value="51">51y</option>
+								<option value="52">52y</option>
+								<option value="53">53y</option>
+								<option value="54">54y</option>
+								<option value="55">55y</option>
+								<option value="56">56y</option>
+								<option value="57">57y</option>
+								<option value="58">58y</option>
+								<option value="59">59y</option>
+								<option value="60">60y</option>
+								<option value="61">61y</option>
+								<option value="62">62y</option>
+								<option value="63">63y</option>
+								<option value="64">64y</option>
+								<option value="65">65y</option>
+								<option value="66">66y</option>
+								<option value="67">67y</option>
+								<option value="68">68y</option>
+								<option value="69">69y</option>
+								<option value="70">70y</option>
+								<option value="71">71y</option>
+								<option value="72">72y</option>
+								<option value="73">73y</option>
+								<option value="74">74y</option>
+								<option value="75">75y</option>
+								<option value="76">76y</option>
+								<option value="77">77y</option>
+								<option value="78">78y</option>
+								<option value="79">79y</option>
+								<option value="80">80y</option>
+								<option value="81">81y</option>
+								<option value="82">82y</option>
+								<option value="83">83y</option>
+								<option value="84">84y</option>
+								<option value="85">85y</option>
+								<option value="86">86y</option>
+								<option value="87">87y</option>
+								<option value="88">88y</option>
+								<option value="89">89y</option>
+								<option value="90">90y</option>
+								<option value="91">91y</option>
+								<option value="92">92y</option>
+								<option value="93">93y</option>
+								<option value="94">94y</option>
+								<option value="95">95y</option>
+								<option value="96">96y</option>
+								<option value="97">97y</option>
+								<option value="98">98y</option>
+								<option value="99">99y</option>
+								<option value="100">100y</option>
+								<option value="101">101y</option>
+								<option value="102">102y</option>
+								<option value="103">103y</option>
+								<option value="104">104y</option>
+								<option value="105">105y</option>
+								<option value="106">106y</option>
+								<option value="107">107y</option>
+								<option value="108">108y</option>
+								<option value="109">109y</option>
+								<option value="110">110y</option>
+								<option value="111">111y</option>
+								<option value="112">112y</option>
+								<option value="113">113y</option>
+								<option value="114">114y</option>
+								<option value="115">115y</option>
+								<option value="116">116y</option>
+								<option value="117">117y</option>
+								<option value="118">118y</option>
+								<option value="119">119y</option>
+								<option value="120">120y</option>
+							</select> <select name="age_max" id="age_max_select">
+								<option value="0"></option>
+								<option value="5">5y</option>
+								<option value="6">6y</option>
+								<option value="7">7y</option>
+								<option value="8">8y</option>
+								<option value="9">9y</option>
+								<option value="10">10y</option>
+								<option value="11">11y</option>
+								<option value="12">12y</option>
+								<option value="13">13y</option>
+								<option value="14">14y</option>
+								<option value="15">15y</option>
+								<option value="16">16y</option>
+								<option value="17">17y</option>
+								<option value="18">18y</option>
+								<option value="19">19y</option>
+								<option value="20">20y</option>
+								<option value="21">21y</option>
+								<option value="22">22y</option>
+								<option value="23">23y</option>
+								<option value="24">24y</option>
+								<option value="25">25y</option>
+								<option value="26">26y</option>
+								<option value="27">27y</option>
+								<option value="28">28y</option>
+								<option value="29">29y</option>
+								<option value="30">30y</option>
+								<option value="31">31y</option>
+								<option value="32">32y</option>
+								<option value="33">33y</option>
+								<option value="34">34y</option>
+								<option value="35">35y</option>
+								<option value="36">36y</option>
+								<option value="37">37y</option>
+								<option value="38">38y</option>
+								<option value="39">39y</option>
+								<option value="40">40y</option>
+								<option value="41">41y</option>
+								<option value="42">42y</option>
+								<option value="43">43y</option>
+								<option value="44">44y</option>
+								<option value="45">45y</option>
+								<option value="46">46y</option>
+								<option value="47">47y</option>
+								<option value="48">48y</option>
+								<option value="49">49y</option>
+								<option value="50">50y</option>
+								<option value="51">51y</option>
+								<option value="52">52y</option>
+								<option value="53">53y</option>
+								<option value="54">54y</option>
+								<option value="55">55y</option>
+								<option value="56">56y</option>
+								<option value="57">57y</option>
+								<option value="58">58y</option>
+								<option value="59">59y</option>
+								<option value="60">60y</option>
+								<option value="61">61y</option>
+								<option value="62">62y</option>
+								<option value="63">63y</option>
+								<option value="64">64y</option>
+								<option value="65">65y</option>
+								<option value="66">66y</option>
+								<option value="67">67y</option>
+								<option value="68">68y</option>
+								<option value="69">69y</option>
+								<option value="70">70y</option>
+								<option value="71">71y</option>
+								<option value="72">72y</option>
+								<option value="73">73y</option>
+								<option value="74">74y</option>
+								<option value="75">75y</option>
+								<option value="76">76y</option>
+								<option value="77">77y</option>
+								<option value="78">78y</option>
+								<option value="79">79y</option>
+								<option value="80">80y</option>
+								<option value="81">81y</option>
+								<option value="82">82y</option>
+								<option value="83">83y</option>
+								<option value="84">84y</option>
+								<option value="85">85y</option>
+								<option value="86">86y</option>
+								<option value="87">87y</option>
+								<option value="88">88y</option>
+								<option value="89">89y</option>
+								<option value="90">90y</option>
+								<option value="91">91y</option>
+								<option value="92">92y</option>
+								<option value="93">93y</option>
+								<option value="94">94y</option>
+								<option value="95">95y</option>
+								<option value="96">96y</option>
+								<option value="97">97y</option>
+								<option value="98">98y</option>
+								<option value="99">99y</option>
+								<option value="100">100y</option>
+								<option value="101">101y</option>
+								<option value="102">102y</option>
+								<option value="103">103y</option>
+								<option value="104">104y</option>
+								<option value="105">105y</option>
+								<option value="106">106y</option>
+								<option value="107">107y</option>
+								<option value="108">108y</option>
+								<option value="109">109y</option>
+								<option value="110">110y</option>
+								<option value="111">111y</option>
+								<option value="112">112y</option>
+								<option value="113">113y</option>
+								<option value="114">114y</option>
+								<option value="115">115y</option>
+								<option value="116">116y</option>
+								<option value="117">117y</option>
+								<option value="118">118y</option>
+								<option value="119">119y</option>
+								<option value="120">120y</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="formActions">
+						<input type="submit" value="Search profiles" /> <input
+							type="submit" name="_advanced_search" value="Advanced search"
+							class="advanced" /> <strong>Order by</strong> <input
+							type="radio" name="orderby" id="orderby_relevance"
+							value="relevance" checked="checked" /> <label
+							for="orderby_relevance">Relevance</label> <input type="radio"
+							name="orderby" id="orderby_hits" value="hits" /> <label
+							for="orderby_hits">Hits</label> <input type="radio"
+							name="orderby" id="orderby_votes" value="votes" /> <label
+							for="orderby_votes">Votes</label>
+					</div>
+				</div>
+			</form>
+
+			<!-- PAGINATION -->
+			<div class="pagination">
+				<ul>
+					<li><a class="sel">1</a></li>
+					<li><a href="/profiles/1">2</a></li>
+					<li><a href="/profiles/2">3</a></li>
+					<li><a href="/profiles/3">4</a></li>
+					<li><a href="/profiles/4">5</a></li>
+					<li><a href="/profiles/5">6</a></li>
+					<li><a href="/profiles/6">7</a></li>
+					<li><a href="/profiles/7">8</a></li>
+					<li><a href="/profiles/8">9</a></li>
+					<li><a href="/profiles/9">10</a></li>
+					<li><a class="nP" href="/profiles/1">Next</a></li>
+				</ul>
+			</div>
+			<!-- END PAGINATION -->
+			<div id="profilesList" class="profilesGalleries">
+				<%ArrayList user = null,user1 = null;
 		
       //...checking session exist or not.......//
      	 
@@ -667,30 +672,30 @@ org.hibernate.Query,
 									}
 									//......lodding image.../////
 						%>
-      
-                <div class="thumbProfile" id="profile_adultslutfinder">
-          <div class="thumb">
-            <div class="vcenter">
-              <div class="vcenter-ie">
-                <a href="profiles.jsp?u_id=<%=u1.getUser_id()%>">
-                 <img src=\<%=m.getLink()%> width="180" height="180"  /></a>
-              </div>
-            </div>
-                      </div>
-          <p class="profileName">
-            <a href="profiles.jsp?u_id=<%=u1.getUser_id()%>"><%=u1.getProfile_name() %></a>
-          </p>
-                    <p class="profileInfo">
-            <%=u1.getSex() %>            <%=u1.getAge() %>y            from <%=u1.getCountry() %>
-          </p>
-                    <p class="itemsCounts">
-                        10 videos - 318 favs - 170 photos
-                      </p>
-        </div>        
-               
-               
-               
-	<%
+
+				<div class="thumbProfile" id="profile_adultslutfinder">
+					<div class="thumb">
+						<div class="vcenter">
+							<div class="vcenter-ie">
+								<a href="profiles.jsp?u_id=<%=u1.getUser_id()%>"> <img src=\
+									<%=m.getLink()%> width="180" height="180" /></a>
+							</div>
+						</div>
+					</div>
+					<p class="profileName">
+						<a href="profiles.jsp?u_id=<%=u1.getUser_id()%>"><%=u1.getProfile_name() %></a>
+					</p>
+					<p class="profileInfo">
+						<%=u1.getSex() %>
+						<%=u1.getAge() %>y from
+						<%=u1.getCountry() %>
+					</p>
+					<p class="itemsCounts">10 videos - 318 favs - 170 photos</p>
+				</div>
+
+
+
+				<%
 								}
 								}
 						
@@ -727,16 +732,18 @@ String j=jump+"";
 					if(jump==k)
 					{	%>
 
-						<a href="find_friend.jsp?k=<%=k %>"><input type="button" value=<%=k %> disabled="disabled"></a>
-							<%
+				<a href="find_friend.jsp?k=<%=k %>"><input type="button"
+					value=<%=k %> disabled="disabled"></a>
+				<%
 						
 					}
 					else
 					{
 					%>
 
-				<a href="find_friend.jsp?k=<%=k %>"><input type="button" value=<%=k %>></a>
-					<%
+				<a href="find_friend.jsp?k=<%=k %>"><input type="button"
+					value=<%=k %>></a>
+				<%
 					}}
 					
 					
@@ -749,94 +756,80 @@ String j=jump+"";
 		 }
 
 		 %>
-	    
-      <!-- PAGINATION -->
-            <div class="pagination">
-        <ul>
-                  
-                  
-                              <li>
-                        <a class="sel">1</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/1">2</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/2">3</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/3">4</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/4">5</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/5">6</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/6">7</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/7">8</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/8">9</a>
-                      </li>
-                    <li>
-                        <a href="/profiles/9">10</a>
-                      </li>
-                              <li><a class="nP" href="/profiles/1">Next</a></li>
-                  </ul>
-      </div>
-            <!-- END PAGINATION -->
-      
-    </div> <!-- #main -->
-    
-    <div id="ad-bottom">
-      <div id="wpn_ad_footer"></div>
-      <p>Ads by <a href="http://www.trafficfactory.biz/">TrafficFactory.biz</a></p>
-    </div>
-    
-    <!-- Last round : 1409938855 -->   
-  
 
-	
-	
-	
-   <footer>
-      <div class="botLinks">
-        <a href="http://info.HALAMB.com/legal/tos/">Terms of service</a> - 
-        <a href="http://info.HALAMB.com/">Upload Your Videos</a> - 
-        <a href="http://www.ant.com/video-downloader/" target="_blank">Download our videos</a> - 
-        <a href="http://info.HALAMB.com/advertising/">Advertising</a> - 
-        <a href="http://info.HALAMB.com/content/">Content removal</a> - 
-        <a href="/rss/rss.xml">RSS Updates</a> - 
-        <a href="/rss/del.xml">Deletes RSS</a> - 
-        <a href="http://info.HALAMB.com/">More</a>...
-      </div>
+				<!-- PAGINATION -->
+				<div class="pagination">
+					<ul>
 
-      <p class="slogan">HALAMB.com - the best free bestvideos on internet, 100% free.</p>
-    </footer>
-    
-  </div> <!-- #page  -->
- </div>
-  <script type="text/javascript" src="http://static.HALAMB.com/v2/js/ads.js?v=1"></script>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  
-  <script src="http://static.HALAMB.com/v2/js/script.js?v=14"></script>
+						<li><a class="sel">1</a></li>
+						<li><a href="/profiles/1">2</a></li>
+						<li><a href="/profiles/2">3</a></li>
+						<li><a href="/profiles/3">4</a></li>
+						<li><a href="/profiles/4">5</a></li>
+						<li><a href="/profiles/5">6</a></li>
+						<li><a href="/profiles/6">7</a></li>
+						<li><a href="/profiles/7">8</a></li>
+						<li><a href="/profiles/8">9</a></li>
+						<li><a href="/profiles/9">10</a></li>
+						<li><a class="nP" href="/profiles/1">Next</a></li>
+					</ul>
+				</div>
+				<!-- END PAGINATION -->
 
-    
-    
-  
-  
-    <script src="http://static.HALAMB.com/v2/js/script-account-nologin.js"></script>
-  <script type="text/javascript" language="javascript">
+			</div>
+			<!-- #main -->
+
+			<div id="ad-bottom">
+				<div id="wpn_ad_footer"></div>
+				<p>
+					Ads by <a href="http://www.trafficfactory.biz/">TrafficFactory.biz</a>
+				</p>
+			</div>
+
+			<!-- Last round : 1409938855 -->
+
+
+
+
+
+			<footer>
+			<div class="botLinks">
+				<a href="http://info.HALAMB.com/legal/tos/">Terms of service</a> - <a
+					href="http://info.HALAMB.com/">Upload Your Videos</a> - <a
+					href="http://www.ant.com/video-downloader/" target="_blank">Download
+					our videos</a> - <a href="http://info.HALAMB.com/advertising/">Advertising</a>
+				- <a href="http://info.HALAMB.com/content/">Content removal</a> - <a
+					href="/rss/rss.xml">RSS Updates</a> - <a href="/rss/del.xml">Deletes
+					RSS</a> - <a href="http://info.HALAMB.com/">More</a>...
+			</div>
+
+			<p class="slogan">HALAMB.com - the best free bestvideos on
+				internet, 100% free.</p>
+			</footer>
+
+		</div>
+		<!-- #page  -->
+	</div>
+	<script type="text/javascript"
+		src="http://static.HALAMB.com/v2/js/ads.js?v=1"></script>
+
+	<script
+		src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+	<script src="http://static.HALAMB.com/v2/js/script.js?v=14"></script>
+
+
+
+
+
+	<script src="http://static.HALAMB.com/v2/js/script-account-nologin.js"></script>
+	<script type="text/javascript" language="javascript">
     HALAMB.cookies.set("SEARCH_BODY_UNIT", "", 10, "/", "HALAMB.com", false);
   </script>
-  
-  
-  <script type="text/javascript">  
+
+
+	<script type="text/javascript">  
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-24038425-1']);
     _gaq.push(['_trackPageview']);
@@ -848,11 +841,13 @@ String j=jump+"";
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();  
   </script>
-  
 
-  <!--  -->
+
+	<!--  -->
 </body>
-</html><!-- Gen By 238 --><!-- 
+</html>
+<!-- Gen By 238 -->
+<!-- 
  ID : 34b220d54e2958ae858099133e12a935
 O:8:"stdClass":4:{s:8:"sitename";s:7:"default";s:4:"type";s:18:"profiles-clicksort";s:9:"sexfilter";s:5:"woman";s:4:"page";i:0;}
 Time : 0 d 0 h 2 m 5 s

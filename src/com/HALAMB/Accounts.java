@@ -93,7 +93,9 @@ public class Accounts extends HttpServlet {
 	
 	
 	AnnotationConfiguration config=new AnnotationConfiguration();
-	//config.addAnnotatedClass();
+	config.addAnnotatedClass(USER_EXTRA_INFO.class);
+	config.addAnnotatedClass(Privacy.class);
+	config.addAnnotatedClass(USER_LANGUAGE.class);
 	config.configure("hibernate.cfg.xml");
 	//new SchemaExport(config).create(true,true);
 	SessionFactory factory=config.buildSessionFactory();

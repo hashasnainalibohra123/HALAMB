@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div>
+	<div>
 
-<%
+		<%
 HttpSession session1=request.getSession(false);
 
 String pass;
@@ -55,7 +55,7 @@ else
 String queryString="from USER_INFO where email='"+user+"'";
 %>
 
-<% 
+		<% 
 
 
 pass=(String) session1.getAttribute("random_NUMBER");
@@ -80,6 +80,7 @@ else
 	//getServletContext().getRequestDispatcher("/logedPage.jsp").forward(request, response);
 }
 
-%></div>
+%>
+	</div>
 </body>
 </html>

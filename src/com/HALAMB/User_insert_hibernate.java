@@ -21,6 +21,13 @@ public User_insert_hibernate()
 {
 	config.addAnnotatedClass(USER_INFO.class);
 	config.addAnnotatedClass(IMAGE_DATA.class);
+	config.addAnnotatedClass(User_profile_pic.class);
+	config.addAnnotatedClass(PROFILE_COMMENT_TABLE.class);
+	config.addAnnotatedClass(Privacy.class);
+	config.addAnnotatedClass(USER_EXTRA_INFO.class);
+
+	config.addAnnotatedClass(USER_LANGUAGE.class);
+	
 	config.configure("hibernate.cfg.xml");
 	 factory=config.buildSessionFactory();
 	
@@ -29,7 +36,24 @@ public User_insert_hibernate()
 	//config.addAnnotatedClass();
 	//new SchemaExport(config).create(true,true);
 	
-	public void UserSignUp(USER_INFO u){
+public void FriendRequestInsert(FriendCount f){
+	
+	//	new SchemaExport(config).create(true,true);
+		
+		Session session=factory.getCurrentSession();
+		
+		
+		session.beginTransaction();
+		
+		
+		
+		
+	session.save(f);
+	session.getTransaction().commit();
+	
+		
+	}
+public void UserSignUp(USER_INFO u){
 		
 	//	new SchemaExport(config).create(true,true);
 		
@@ -167,7 +191,7 @@ public void UserUploadProfilePic(User_profile_pic i){
 		System.out.println("hello the size is:"+user.size());
 		for(USER_INFO u1:user)
 		{
-			System.out.println("your email is"+u1.getEmail());
+			System.out.println("yourzxczxvczx email is"+u1.getEmail());
 			System.out.println("your PASSWORD is"+u1.getPass()+"\n\n");
 			
 			u2=u1;

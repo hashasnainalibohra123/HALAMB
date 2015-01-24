@@ -23,6 +23,13 @@ private String ethnicity;
 private String height_text;
 private String weight_text;
 private String body_unit;
+private String AboutMe;
+public String getAboutMe() {
+	return AboutMe;
+}
+public void setAboutMe(String aboutMe) {
+	AboutMe = aboutMe;
+}
 public int getId() {
 	return id;
 }

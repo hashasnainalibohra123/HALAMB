@@ -71,7 +71,7 @@ public class Upload_Profile_pic extends HttpServlet {
 
 	//ANNOTATION CONFIGURATION//
 		AnnotationConfiguration config=new AnnotationConfiguration();
-		//config.addAnnotatedClass();
+		config.addAnnotatedClass(User_profile_pic.class);
 		config.configure("hibernate.cfg.xml");
 		//new SchemaExport(config).create(true,true);
 		SessionFactory factory=config.buildSessionFactory();

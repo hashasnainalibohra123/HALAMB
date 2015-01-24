@@ -9,30 +9,58 @@ h2 {
 	font-weight: bold;
 	margin: 4px 0 0;
 }
-h2 .duration { font-weight: normal; }
-h2 .profile_name { font-weight: normal; }
-h2 .profile_name a, h2 .profile_name a:visited,
-#main #video-tags li.profile_name a, #main #video-tags li.profile_name a:visited {
+
+h2 .duration {
+	font-weight: normal;
+}
+
+h2 .profile_name {
+	font-weight: normal;
+}
+
+h2 .profile_name a,h2 .profile_name a:visited,#main #video-tags li.profile_name a,#main #video-tags li.profile_name a:visited
+	{
 	color: #f00;
 	font-weight: bold;
 	text-decoration: underline;
 }
-#main #video-tags { margin: 0; font-size: 13px; }
-#main #video-tags li { display: inline; }
-#main #video-tags li a { text-decoration: none; }
-#main #video-tags li a:hover { text-decoration: underline; }
-.tags_list { margin: 0; }
-.tags_list li a { text-decoration: underline; }
+
+#main #video-tags {
+	margin: 0;
+	font-size: 13px;
+}
+
+#main #video-tags li {
+	display: inline;
+}
+
+#main #video-tags li a {
+	text-decoration: none;
+}
+
+#main #video-tags li a:hover {
+	text-decoration: underline;
+}
+
+.tags_list {
+	margin: 0;
+}
+
+.tags_list li a {
+	text-decoration: underline;
+}
 
 /* ==== VIDEO: PLAYER, CHANNEL, AD ==== */
 #main #content {
 	margin-top: 10px;
 }
+
 #main #video-ad {
 	float: right;
 	width: 338px;
 	text-align: center;
 }
+
 #main #channel {
 	margin: 0 0 10px;
 	width: 564px;
@@ -42,6 +70,7 @@ h2 .profile_name a, h2 .profile_name a:visited,
 	font-size: 18px;
 	line-height: 24px;
 }
+
 #adChannel {
 	text-align: center;
 	font-size: 14px;
@@ -49,18 +78,25 @@ h2 .profile_name a, h2 .profile_name a:visited,
 	overflow: hidden;
 	padding: 4px 8px;
 	background: #000;
-	color: #FFF;	
+	color: #FFF;
 }
-#adChannel a { color: #fff; text-decoration: underline; }
+
+#adChannel a {
+	color: #fff;
+	text-decoration: underline;
+}
+
 #adChannel .channel_desc {
 	font-size: 13px;
 	font-weight: normal;
 }
+
 #main #player {
 	width: 588px;
 	overflow: hidden;
 	line-height: 0;
 }
+
 #wpn_ad_square a:first-child {
 	display: block;
 	margin-bottom: 6px;
@@ -72,6 +108,7 @@ h2 .profile_name a, h2 .profile_name a:visited,
 	clear: both;
 	z-index: 100;
 }
+
 #videoTabs .nb_views {
 	display: inline-block;
 	font-size: 15px;
@@ -80,6 +117,7 @@ h2 .profile_name a, h2 .profile_name a:visited,
 	text-align: center;
 	vertical-align: top;
 }
+
 #videoTabs .nb_views .text {
 	font-size: 11px;
 	font-weight: normal;
@@ -90,12 +128,33 @@ h2 .profile_name a, h2 .profile_name a:visited,
 	font-size: 12px;
 	width: 216px;
 }
-#videoTabs .xv-popup .tabHeaderForm table { font-size: 12px; width: 216px; }
-#videoTabs .xv-popup .tabHeaderForm th,
-#videoTabs .xv-popup .tabHeaderForm td { padding-top: 0; padding-bottom: 0; }
-#videoTabs .xv-popup .tabHeaderForm td { text-align: right; }
-#videoTabs .xv-popup .tabHeaderForm input[type="submit"] { margin-top: 5px; font-weight: bold; }
-#videoTabs .xv-popup .tabHeaderForm .forgot_password { margin-top: 2px; font-size: 11px; line-height: 12px; }
+
+#videoTabs .xv-popup .tabHeaderForm table {
+	font-size: 12px;
+	width: 216px;
+}
+
+#videoTabs .xv-popup .tabHeaderForm th,#videoTabs .xv-popup .tabHeaderForm td
+	{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+#videoTabs .xv-popup .tabHeaderForm td {
+	text-align: right;
+}
+
+#videoTabs .xv-popup .tabHeaderForm input[type="submit"] {
+	margin-top: 5px;
+	font-weight: bold;
+}
+
+#videoTabs .xv-popup .tabHeaderForm .forgot_password {
+	margin-top: 2px;
+	font-size: 11px;
+	line-height: 12px;
+}
+
 #videoTabs .xv-popup .tabHeaderForm a.button {
 	float: right;
 	margin-top: 5px;
@@ -110,26 +169,37 @@ h2 .profile_name a, h2 .profile_name a:visited,
 	text-align: center;
 	padding-top: 3px;
 }
+
 #tabComments div#commentForm .leftCol div {
 	margin-top: 23px;
 	padding: 4px 8px;
 	font-size: 11px;
 }
+
 #tabComments div#commentForm p {
 	font-size: 14px;
-	margin:  0 0 8px 2px;
+	margin: 0 0 8px 2px;
 }
+
 #tabComments div#commentForm.noLoginReq p {
 	font-size: 13px;
 	text-align: left;
 	line-height: 22px;
 }
-#tabComments div#commentForm.noLoginReq .leftCol { width: 100px; }
-#tabComments div#commentForm.noLoginReq .leftCol div { margin-top: 20px; }
+
+#tabComments div#commentForm.noLoginReq .leftCol {
+	width: 100px;
+}
+
+#tabComments div#commentForm.noLoginReq .leftCol div {
+	margin-top: 20px;
+}
+
 #tabComments div#commentForm textarea {
 	width: 97%;
 	padding: 4px;
 }
+
 #tabComments .comment {
 	padding: 10px 0;
 	margin: 0 4px;
@@ -137,18 +207,24 @@ h2 .profile_name a, h2 .profile_name a:visited,
 	border-bottom: 1px solid #CCCCCC;
 	border-top: 1px solid #FFFFFF;
 }
-#tabComments .comment:first-child { border-top: none; }
+
+#tabComments .comment:first-child {
+	border-top: none;
+}
+
 #tabComments .comment .comment_profilepic {
 	float: left;
 	padding-right: 10px;
 	width: 52px;
 	height: 52px;
 }
+
 #tabComments .comment .comment_profilepic img {
 	width: 50px;
 	height: 50px;
 	border: 1px solid #000;
 }
+
 #tabComments .comment .comment_user {
 	font-size: 12px;
 	border: 1px solid #000;
@@ -158,8 +234,15 @@ h2 .profile_name a, h2 .profile_name a:visited,
 	overflow: hidden;
 	font-weight: normal;
 }
-#tabComments .comment .comment_date { display: inline; }
-#tabComments .comment .comment_comment { overflow: hidden; }
+
+#tabComments .comment .comment_date {
+	display: inline;
+}
+
+#tabComments .comment .comment_comment {
+	overflow: hidden;
+}
+
 #tabComments .pagination {
 	margin: 0 4px;
 	padding-top: 20px;
@@ -167,14 +250,20 @@ h2 .profile_name a, h2 .profile_name a:visited,
 }
 
 /* ==== VIDEO: FAVORITES ==== */
-#tabFavs { font-size: 14px; }
-#tabFavs #addToFavoritesForm { margin: 20px 10px 0 }
+#tabFavs {
+	font-size: 14px;
+}
+
+#tabFavs #addToFavoritesForm {
+	margin: 20px 10px 0
+}
 
 /* ==== VIDEO: SHARE, EMBED ==== */
 #tabShare #shareButtons {
 	margin: 20px auto 0;
 	width: 500px;
 }
+
 #tabEmbed #mediaEmbedCodeInput {
 	font-size: 14px;
 	margin: 20px 0 0;
@@ -188,11 +277,13 @@ h2 .profile_name a, h2 .profile_name a:visited,
 	overflow: hidden;
 	*zoom: 1;
 }
+
 #relatedVideos .thumbBlock {
 	width: 20%;
 	border: none;
 	background: none;
 }
+
 #relatedVideosWithMore {
 	position: relative;
 	height: 390px;
@@ -200,20 +291,24 @@ h2 .profile_name a, h2 .profile_name a:visited,
 	overflow: hidden;
 	*zoom: 1;
 }
+
 #relatedVideosWithMore .page {
 	position: absolute;
 	width: 100%;
 	top: 100%;
 	left: 0;
 }
+
 #relatedVideosWithMore .thumbBlock {
 	width: 20%;
 	border: none;
 	background: none;
 }
+
 #relatedVideosMoreLink {
 	text-align: center;
 }
+
 #relatedVideosMoreLink a {
 	font-weight: bold;
 	font-size: 15px;

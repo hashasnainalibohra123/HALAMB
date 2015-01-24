@@ -1,22 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+
+
 </head>
 <body>
 
-<%@ page import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA,com.HALAMB.User_profile_pic, java.util.ArrayList,
+
+	<%@ page
+		import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA,com.HALAMB.User_profile_pic, java.util.ArrayList,
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
  javax.imageio.ImageIO,
  java.io.File,com.HALAMB.Comment_Table,
- java.awt.image.BufferedImage;" %>
-<%HttpSession session1=request.getSession(true);
+ java.awt.image.BufferedImage;"%>
+
+
+
+
+	<%HttpSession session1=request.getSession(true);
 				
 			String s1=(String)session1.getAttribute("email");
 			String s2=(String)session1.getAttribute("password");
@@ -26,24 +34,94 @@ org.hibernate.Query,
 			session.setAttribute("Image_Id",Image_Id);
 				
 			%>
-			
-			
-			
-			
-			
-			
-			
-			
-			 <div id="tabComments" class="tab">
-            				
-		<h3 class="blackTitle" >Comments (<span class="nbVideoComments">8</span>):</h3>
-			
-			
-			
-			
-			
-			
-			<%ArrayList user1=null,user3=null,user4=null,user5 = null,user6 = null;
+
+
+
+
+
+
+
+
+	<div id="tabComments" class="tab">
+
+		<h3 class="blackTitle">
+			Comments (<span class="nbVideoComments">8</span>):
+		</h3>
+
+
+		<%
+			if(s1==null && s2==null || session1.isNew())
+							
+				{	%>
+
+
+
+		<div class="tabHeaderForm notLoggedIn">
+
+			<div class="leftCol">
+				<p>
+					<strong>You must be logged in to comment a video.</strong>
+				</p>
+				<form method="POST" id="signinForm" action="LOGIN_ACCOUNT">
+					<table>
+						<tr>
+							<th>Your login (email):</th>
+							<td><input type="text" name="login" id="comment__login_text" /></td>
+						</tr>
+						<tr>
+							<th>Your password:</th>
+							<td><input type="password" name="password"
+								id="comment__password_text" /></td>
+						</tr>
+					</table>
+					<input type="submit" value="Login" name="log" />
+					<p class="forgot_password">
+						<a href="http://upload.HALAMB.com/account/lostpassword"
+							target="_blank">Forgot username or password ?</a>
+					</p>
+				</form>
+			</div>
+			<div class="rightCol">
+				<p>Not yet a HALAMB member? Here is what you can do with a FREE
+					account:</p>
+				<ul>
+					<li>- Upload videos.</li>
+					<li>- Commenting.</li>
+					<li>- Add videos to your favorites.</li>
+					<li>- Create your profile page and make some new friends.</li>
+				</ul>
+				<div class="signup">
+					<a class="button" href="http://upload.HALAMB.com/account/create"
+						target="_blank">Sign Up Now For Free</a>
+				</div>
+			</div>
+		</div>
+		<%} else
+				{%>
+
+		<div class="tab" style="border-color: black;">
+			Comment The video<br />
+			<!-- <form method="POST" id="signinForm" action="Comments_loding.jsp" >
+				 -->
+			<form method="POST" id="signinForm">
+				<table>
+					<tr>
+
+						<td><textarea rows="5" name="text" id="message_text"
+								onChange="updateMessageBox()" onKeyUp="updateMessageBox()"></textarea></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="Comment" name="log"
+							onclick="fReload();" /></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<%} %>
+
+
+		<span id="addHere"></span>
+		<%ArrayList user1=null,user3=null,user4=null,user5 = null,user6 = null;
 	
  	HttpSession session11=request.getSession(false);
 	
@@ -56,12 +134,13 @@ org.hibernate.Query,
 	String session13,session2;
 	
 	//<<<<<<<<<<<<<first we get Comment as we know the image id>>>>>>>>>>>>>>>>//
-	String queryString="from Comment_Table where Image_Id='"+Image_Id+"'";
+	String queryString="from Comment_Table where Image_Id='"+Image_Id+"' ORDER BY comment_date DESC";
 	AnnotationConfiguration config1=new AnnotationConfiguration();
 
 	config1.addAnnotatedClass(IMAGE_DATA.class);
 	config1.addAnnotatedClass(IMAGE_DATA.class);
 	config1.addAnnotatedClass(Comment_Table.class);
+	config1.addAnnotatedClass(User_profile_pic.class);
 	config1.configure("hibernate.cfg.xml");
 	SessionFactory factory=config1.buildSessionFactory();
 	
@@ -108,7 +187,7 @@ org.hibernate.Query,
 				//....display image...........
 				
 				
-					queryString="from Comment_Table where image_id='"+Image_Id+"'";
+					queryString="from Comment_Table where image_id='"+Image_Id+"' ORDER BY comment_date DESC";
 					Query q12=session112.createQuery(queryString);
 					user3= (ArrayList) q12.list();
 					System.out.println("hello the size for Image<<<<<<<<>>>>>>>>>data is:"+user3.size());
@@ -158,11 +237,15 @@ org.hibernate.Query,
 							
 							%>
 
-<br><p><img style="vertical-align:middle;" src=\<%=m4.getLink()%> width="50" height="50"  />
-							 
-							
-							
-							<%
+		<br>
+		<p>
+			<img
+				style="vertical-align: middle; margin-left: 10px; margin-right: 20px; border: 1px solid black;"
+				src=\<%=m4.getLink()%> width="60" height="60" align="left" />
+
+
+
+			<%
 					
 					 	
 					 	System.out.println("GASDFGHHHJKLLLLLLLLL");
@@ -174,7 +257,8 @@ org.hibernate.Query,
 							System.out.println("THIS IS THE ERRROR  "+e);
 							
 						}	
-					%><%
+					%>
+			<%
 					ArrayList user7=null;
 					String r="from USER_INFO where user_id="+b[i3];
 					Query w=session112.createQuery(r);
@@ -185,21 +269,27 @@ org.hibernate.Query,
 						for(int i14=0;i14<user7.size();i14++)
 						{
 							USER_INFO m4=(USER_INFO)user7.get(i14);
-				%><table>
+				%>
+		
+		<div class="tab"
+			style="border-color: black; background-color: rgb(120, 156, 147);">
+			<table style="margin-left: 50px;">
 				<tr>
-				<td>
-				<%=m4.getProfile_name() %>
-				</td><%		}
+					<td><a href="profiles.jsp?u_id=<%=m4.getUser_id()%>"><%=m4.getProfile_name() %></a>-<%=c.getComment_date()%></td>
+					<%		}
 					}
 					
-					%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td><%=c.getComment_date()%> </td>
-					</tr></table><%=c.getComment()%>
-							<br><hr> 	
-					
-				
-								
-								
-					<%}
+					%><td></td>
+				</tr>
+			</table>
+		</div><%=c.getComment()%>
+		<br>
+		<hr>
+
+
+
+
+		<%}
 					}
 					
 				
@@ -221,70 +311,14 @@ org.hibernate.Query,
   
   
   %>
-		<%
-			if(s1==null && s2==null || session1.isNew())
-							
-				{	%>
-				
-				  
-            
-          <div class="tabHeaderForm notLoggedIn">
-         
-				<div class="leftCol">
-					<p><strong>You must be logged in to comment a video.</strong></p>
-					<form method="POST" id="signinForm" action="LOGIN_ACCOUNT" >
-					<table>
-						<tr>
-						<th>Your login (email):</th>
-						<td><input type="text" name="login" id="comment__login_text" /></td>
-						</tr>
-						<tr>
-						<th>Your password:</th>
-						<td><input type="password" name="password" id="comment__password_text" /></td>
-						</tr>
-					</table>
-					<input type="submit" value="Login" name="log" />
-					<p class="forgot_password"><a href="http://upload.HALAMB.com/account/lostpassword" target="_blank">Forgot username or password ?</a></p>
-					</form>
-				</div>
-				<div class="rightCol">
-					<p>Not yet a HALAMB member? Here is what you can do with a FREE account:</p>
-					<ul>
-					<li>- Upload videos.</li>
-					<li>- Commenting.</li>
-					<li>- Add videos to your favorites.</li>
-					<li>- Create your profile page and make some new friends.</li>
-					</ul>
-					<div class="signup">
-					<a class="button" href="http://upload.HALAMB.com/account/create" target="_blank">Sign Up Now For Free</a>
-					</div>
-				</div>
-				
-				<%} else
-				{%>Comment The video<br/>
-				
-					<div >
-				
-					<form method="POST" id="signinForm" action="Comments_loding.jsp" >
-					<table>
-						<tr>
-						
-						<td><textarea rows="5" name="text" id="message_text" onChange="updateMessageBox()" onKeyUp="updateMessageBox()"></textarea></td>
-						</tr>
-						<tr>
-						<td><input type="submit" value="Comment" name="log" />
-					</td>
-						</tr>
-					</table>
-					</form>
-				</div>
-				
-				
-				<%} %>
-				
-				</div>
-           
-          </div>
-      			
+
+
+
+
+
+
+	</div>
+
+
 </body>
 </html>

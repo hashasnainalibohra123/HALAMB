@@ -16,7 +16,6 @@ public class Privacy {
 	private int upload_access;
 	private int contact_access;
 	private int wall_access;
-	
 	public int getWall_access() {
 		return wall_access;
 	}

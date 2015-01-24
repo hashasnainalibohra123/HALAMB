@@ -34,6 +34,7 @@ public class ManageFavrates extends HttpServlet {
 		String f_visi=request.getParameter("status");
 		AnnotationConfiguration config=new AnnotationConfiguration();
 		//config.addAnnotatedClass();
+		config.addAnnotatedClass(Favorate_list.class);
 		config.configure("hibernate.cfg.xml");
 		//new SchemaExport(config).create(true,true);
 		SessionFactory factory=config.buildSessionFactory();

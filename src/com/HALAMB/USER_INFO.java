@@ -38,6 +38,13 @@ public class USER_INFO {
 	private String city;
 	private int varified;
 	private Date signupdate;
+	private String Aboutme;
+	public String getAboutme() {
+		return Aboutme;
+	}
+	public void setAboutme(String aboutme) {
+		Aboutme = aboutme;
+	}
 	@Temporal(TemporalType.DATE)
 	public Date getSignupdate() {
 		return signupdate;

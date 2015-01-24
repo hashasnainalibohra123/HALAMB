@@ -62,7 +62,7 @@ System.out.println("hello the size is:"+m.size());
 				System.out.println(s);
 				
 				filePath = getServletContext().getRealPath("") + File.separator +s;
-				
+	System.out.println(filePath);			
 			}
 		}
 		 

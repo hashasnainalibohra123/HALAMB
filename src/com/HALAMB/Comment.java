@@ -117,7 +117,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 		 //session.save(user_image);
 	session.getTransaction().commit();
 	
-	getServletContext().getRequestDispatcher("/Comments_loding.jsp?Image_Id="+i.getImage_id()).forward(request, response);
+	getServletContext().getRequestDispatcher("/Downlaod_side_video.jsp?Image_Id="+i.getImage_id()).forward(request, response);
 	
 		}
 		}

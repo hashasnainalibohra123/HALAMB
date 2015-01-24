@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,16 +8,18 @@
 </head>
 <body>
 
-<%@ page import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA, java.util.ArrayList,
+	<%@ page
+		import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA, java.util.ArrayList,
 org.hibernate.Query,com.HALAMB.Comment_Table,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
  javax.imageio.ImageIO,
  java.io.File,com.HALAMB.Upload_Profile_pic,com.HALAMB.User_profile_pic,
- java.awt.image.BufferedImage;" %>
-<h3 style="color: blue;text-align: center;text-indent: 50px;">Your Comments</h3> 
- <%ArrayList user = null,user1=null,user3=null,user4=null;
+ java.awt.image.BufferedImage;"%>
+	<h3 style="color: blue; text-align: center; text-indent: 50px;">Your
+		Comments</h3>
+	<%ArrayList user = null,user1=null,user3=null,user4=null;
 	HttpSession session11=request.getSession(false);
 	User_insert_hibernate h;
 	IMAGE_DATA i;
@@ -177,10 +179,13 @@ org.hibernate.Query,com.HALAMB.Comment_Table,
 							if(m.getFormate().equals("image/jpeg"))
 								{
 								%>
-								 <h2><%=m.getImage_name() %> <br/></h2>
-								<A href="Download?Image_Id=<%=m.getImage_id() %>"><img src="\<%=m.getLink() %>" width="100" height="100" /></A>
-							
-							<%
+	<h2><%=m.getImage_name() %>
+		<br />
+	</h2>
+	<A href="Download?Image_Id=<%=m.getImage_id() %>"><img
+		src="\<%=m.getLink() %>" width="100" height="100" /></A>
+
+	<%
 							queryString="from Comment_Table where image_id='"+b[g]+"' and user_id='"+u.getUser_id()+"'";
 								Query q12=session112.createQuery(queryString);
 								user3= (ArrayList) q12.list();
@@ -230,10 +235,10 @@ org.hibernate.Query,com.HALAMB.Comment_Table,
 												//String IMG=getServletContext().getRealPath("") + File.separator +s11;
 										
 										%>
-									 <img src=\<%=m4.getLink()%> width="50" height="50"  />
-										
-										
-										<%
+	<img src=\ <%=m4.getLink()%> width="50" height="50" />
+
+
+	<%
 								
 								 	
 								 	
@@ -246,14 +251,16 @@ org.hibernate.Query,com.HALAMB.Comment_Table,
 										
 									}	
 								%><%=ct.getComment() %>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<%=ct.getComment_date() %>		
-											
-					<br>
-					<A link="Delete_Comment?cid=<%=c.getC_id()%>">Delete</A>
-					
-											<br><hr>
-									
-								<%}
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<%=ct.getComment_date() %>
+
+	<br>
+	<A link="Delete_Comment?cid=<%=c.getC_id()%>">Delete</A>
+
+	<br>
+	<hr>
+
+	<%}
 								}
 								}
 							
@@ -264,10 +271,13 @@ org.hibernate.Query,com.HALAMB.Comment_Table,
 								if(m.getFormate().equals("video/mp4"))
 								{
 								%>
-								 <h2><%=m.getImage_name() %> <br/></h2>
-								<A href="Download?Image_Id=<%=m.getImage_id() %>"><video src="\<%=m.getLink() %>" width="100" height="100" /></A>
-							
-							<%
+	<h2><%=m.getImage_name() %>
+		<br />
+	</h2>
+	<A href="Download?Image_Id=<%=m.getImage_id() %>"><video
+			src="\<%=m.getLink() %>" width="100" height="100" /></A>
+
+	<%
 							queryString="from Comment_Table where image_id='"+b[g]+"' and user_id='"+u.getUser_id()+"'";
 								Query q12=session112.createQuery(queryString);
 								user3= (ArrayList) q12.list();
@@ -320,10 +330,11 @@ org.hibernate.Query,com.HALAMB.Comment_Table,
 					//String IMG=getServletContext().getRealPath("") + File.separator +s11;
 			
 			%>
-		 <br><img src=\<%=m4.getLink()%> width="50" height="50"  />
-			
-			
-			<%
+	<br>
+	<img src=\ <%=m4.getLink()%> width="50" height="50" />
+
+
+	<%
 	
 	 	
 	 	
@@ -337,13 +348,14 @@ org.hibernate.Query,com.HALAMB.Comment_Table,
 		}
 									
 								%><%=c.getComment() %>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<%=c.getComment_date() %>		
-								<br>
-					<A href="Delete_Comment?cid=<%=c.getC_id()%>">Delete</A>
-											
-											<hr>
-						
-								<%}
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<%=c.getComment_date() %>
+	<br>
+	<A href="Delete_Comment?cid=<%=c.getC_id()%>">Delete</A>
+
+	<hr>
+
+	<%}
 								}
 								}
 							
@@ -355,21 +367,21 @@ org.hibernate.Query,com.HALAMB.Comment_Table,
 				}//158
 				
 							%>
-							
-							
-							
-							
-							
-							
-					
-				
-					
-							
-							
-							
-					<h2 style="color:gray;">Comments:</h2>
-		
-		<%
+
+
+
+
+
+
+
+
+
+
+
+
+	<h2 style="color: gray;">Comments:</h2>
+
+	<%
 				}//try-84
 				catch(Exception e)
 				{
@@ -380,15 +392,9 @@ org.hibernate.Query,com.HALAMB.Comment_Table,
 		 }//else-77
 	}//else outer-43
 		  %>
-		
-		<h2 style="color:aqua;">
-					<br><hr>
-		
 
-
-
-
-
-
+	<h2 style="color: aqua;">
+		<br>
+		<hr>
 </body>
 </html>

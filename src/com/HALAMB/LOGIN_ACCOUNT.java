@@ -70,7 +70,7 @@ else
 	
 		getServletContext().getRequestDispatcher("/Upload_Image.jsp").forward(request, response);
 			}
-		else if(from.equals("download"))
+		else if(from.equals("download") || from.equals("down") || from.equals("down1"))
 		{
 			System.out.println("session REDIRECING TO DOWNLOAD");
 			String Image_Id=(String)session12.getAttribute("Image_Id");
