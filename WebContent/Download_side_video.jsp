@@ -153,7 +153,7 @@ var str=document.getElementById("message_text").value;
 	   }
 	 xmlhttp.open("GET","gettingHint.jsp?q="+str,true);
 	 xmlhttp.send();
-	
+	alert("hellllllllo");
  
  }
 
@@ -535,8 +535,12 @@ var str=document.getElementById("message_text").value;
         </script>
 
 					<li data-ref="tabShare" class="headtab closable">Share</li>
-					<li data-ref="tabEmbed" class="headtab closable">Embed</li>
+					<li data-ref="tabEmbed" class="headtab closable" onclick="">Embed</li>
 				</ul>
+				<script>hasu()
+				{alert("hello");
+				}</script>
+				
 				<span class=tabs id="res"></span>
 				<div class="tabs">
 
