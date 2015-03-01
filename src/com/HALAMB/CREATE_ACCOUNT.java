@@ -117,7 +117,7 @@ public class CREATE_ACCOUNT extends HttpServlet {
 		u1=new User_insert_hibernate();
 		u1.UserSignUp(u);
 		
-		System.out.println("THis is test @@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+		
 		Properties props = new Properties();
 		props.put("mail.smtp.host", "smtp.gmail.com");
 		props.put("mail.smtp.socketFactory.port", "465");
@@ -129,7 +129,7 @@ public class CREATE_ACCOUNT extends HttpServlet {
 		Session session = Session.getDefaultInstance(props,
 			new javax.mail.Authenticator() {
 				protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication("hasnain.ali.bohra.test@gmail.com","garvit552");
+					return new PasswordAuthentication("hasnain.ali.bohra552@gmail.com","garvit552");
 				}
 			});
  
