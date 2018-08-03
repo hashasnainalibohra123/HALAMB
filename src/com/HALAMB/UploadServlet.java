@@ -25,7 +25,8 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-import com.HALAMB.USER_INFO;
+import com.webmedia.model.IMAGE_DATA;
+import com.webmedia.model.USER_INFO;
 
  
 @WebServlet("/UploadServlet")

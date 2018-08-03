@@ -13,6 +13,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
+import com.webmedia.model.Comment_Table;
+import com.webmedia.model.IMAGE_DATA;
+
 /**
  * Servlet implementation class Delete_Comment
  */

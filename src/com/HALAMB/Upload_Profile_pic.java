@@ -25,7 +25,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
-import com.HALAMB.USER_INFO;
+import com.webmedia.model.USER_INFO;
+import com.webmedia.model.User_profile_pic;
 
 @MultipartConfig(fileSizeThreshold=1024*1024*2, // 2MB
         maxFileSize=1024*1024*10,      // 10MB

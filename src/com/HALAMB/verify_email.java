@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.webmedia.model.USER_INFO;
+
 /**
  * Servlet implementation class verify_email
  */

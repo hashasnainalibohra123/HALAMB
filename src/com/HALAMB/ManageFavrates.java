@@ -14,6 +14,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
+import com.webmedia.model.Favorate_list;
+import com.webmedia.model.USER_INFO;
+
 /**
  * Servlet implementation class ManageFavrates
  */
@@ -33,10 +36,8 @@ public class ManageFavrates extends HttpServlet {
 		String f_name=request.getParameter("name");
 		String f_visi=request.getParameter("status");
 		AnnotationConfiguration config=new AnnotationConfiguration();
-		//config.addAnnotatedClass();
 		config.addAnnotatedClass(Favorate_list.class);
 		config.configure("hibernate.cfg.xml");
-		//new SchemaExport(config).create(true,true);
 		SessionFactory factory=config.buildSessionFactory();
 
 		HttpSession session=request.getSession(false);
@@ -48,7 +49,6 @@ public class ManageFavrates extends HttpServlet {
 		if(session==null)
 
 		{
-				System.out.println("You have to login first");
 				HttpSession session123=request.getSession();
 				session123.setAttribute("from","upload" ); 
 				getServletContext().getRequestDispatcher("/login.html").forward(request, response);
@@ -58,16 +58,13 @@ public class ManageFavrates extends HttpServlet {
 		else
 			
 		{
-				System.out.println("YOU S SESSION IS    ");
 				session1=(String) session.getAttribute("email");
 				session2=(String) session.getAttribute("password");
 				HttpSession session123=request.getSession();
 				session123.setAttribute("from","upload" ); 
-				System.out.println("In the Upload Area "+session1+"   "+session2);
 
 				if(session1==null &&  session2==null)
 				{	
-					System.out.println("In the Upload Area "+session1+"   "+session2);
 					getServletContext().getRequestDispatcher("/login.html").forward(request, response);
 					destroy();
 				}
@@ -99,11 +96,9 @@ public class ManageFavrates extends HttpServlet {
 				session123.beginTransaction();
 				Query q=session123.createQuery(queryString);
 				q.setMaxResults(1);
-				//List user=q.list();
 				
 				List<Favorate_list> user=q.list();
 			
-			System.out.println("hello the size is:"+user.size());
 			if(user.size()<0)
 				session123.save(f);
 			else
@@ -128,15 +123,8 @@ public class ManageFavrates extends HttpServlet {
 				}
 				
 			}	
-				
 				session123.getTransaction().commit();
 				getServletContext().getRequestDispatcher("/favorate.jsp").forward(request, response);
-
-				
-				
-				
-				
-				
 				
 		}
 	
