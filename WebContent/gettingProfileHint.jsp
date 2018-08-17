@@ -1,4 +1,4 @@
-<%@page import="com.HALAMB.PROFILE_COMMENT_TABLE"%>
+<%@page import="com.webmedia.model.PROFILE_COMMENT_TABLE"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,13 +9,13 @@
 </head>
 <body>
 	<%@ page
-		import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA,com.HALAMB.User_profile_pic, java.util.ArrayList,
+		import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA,com.webmedia.model.User_profile_pic, java.util.ArrayList,
 org.hibernate.Query,
  org.hibernate.Session,
-  org.hibernate.SessionFactory,com.HALAMB.Upload_Profile_pic,com.HALAMB.USER_INFO_IMAGE_DATA,
+  org.hibernate.SessionFactory,com.HALAMB.Upload_Profile_pic,com.webmedia.model.USER_INFO_IMAGE_DATA,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
  javax.imageio.ImageIO,java.util.Date,
- java.io.File,com.HALAMB.Comment_Table,
+ java.io.File,com.webmedia.model.Comment_Table,
  java.awt.image.BufferedImage;"%>
 
 

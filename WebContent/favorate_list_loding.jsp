@@ -1,4 +1,4 @@
-<%@page import="com.HALAMB.Favorate_list"%>
+<%@page import="com.webmedia.model.Favorate_list"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -10,13 +10,13 @@
 <body>
 
 	<%@ page
-		import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA,com.HALAMB.User_profile_pic, java.util.ArrayList,
+		import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA,com.webmedia.model.User_profile_pic, java.util.ArrayList,
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
  javax.imageio.ImageIO,com.HALAMB.Favorate_video_List,
- java.io.File,com.HALAMB.Comment_Table,com.HALAMB.Favorate_list,
+ java.io.File,com.webmedia.model.Comment_Table,com.webmedia.model.Favorate_list,
  java.awt.image.BufferedImage;"%>
 
 

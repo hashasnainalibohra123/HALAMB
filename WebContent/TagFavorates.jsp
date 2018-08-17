@@ -1,6 +1,6 @@
-<%@page import="com.HALAMB.Favorate_list"%>
+<%@page import="com.webmedia.model.Favorate_list"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,13 +10,13 @@
 <body>
 
 	<%@ page
-		import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA,com.HALAMB.User_profile_pic, java.util.ArrayList,
+		import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA,com.webmedia.model.User_profile_pic, java.util.ArrayList,
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
  javax.imageio.ImageIO,com.HALAMB.Favorate_video_List,
- java.io.File,com.HALAMB.Comment_Table,com.HALAMB.Favorate_list,
+ java.io.File,com.webmedia.model.Comment_Table,com.webmedia.model.Favorate_list,
  java.awt.image.BufferedImage;"%>
 
 
@@ -40,8 +40,8 @@ org.hibernate.Query,
 
 
 
-	
-			<%ArrayList user= null,user2=null,user_f=null,user_v=null;
+
+	<%ArrayList user= null,user2=null,user_f=null,user_v=null;
 		boolean flag=false;
       //.....boolean for ID checking........//
       boolean flag1=false;
@@ -122,18 +122,18 @@ org.hibernate.Query,
 				q=session23.createQuery("from Favorate_list where user_id="+u.getUser_id());
 				user_f=(ArrayList)q.list();
 				%>
-				<div id="content">
-				<div class="adminBox">
-				
+	<div id="content">
+		<div class="adminBox">
 
-					<div class="contentbox">
-						<h5 class="blackTitle">
-							My favorites lists (<%=user_f.size() %>
-							lists)
-						</h5>
-						<form>
-			
-<%if(user_f!=null && user_f.size()>0)
+
+			<div class="contentbox">
+				<h5 class="blackTitle">
+					My favorites lists (<%=user_f.size() %>
+					lists)
+				</h5>
+				<form>
+
+					<%if(user_f!=null && user_f.size()>0)
 {
 	for(int i1=0;i1<user_f.size();i1++)
 	{
@@ -145,16 +145,18 @@ org.hibernate.Query,
 		System.out.println("THIS IS CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCOUNT+"+count_max +"DDDDDDDDDDDDDDDDDDDDDDDD"+m.getF_id());
 	
 	%>
-							<h5 class="blackTitle">
-							<%=m.getFav_list_name() %>(<%=count_max %>
-							lists)
-						</h5>	<input type="radio"  value="<%=m.getF_id()%>"  name="favlist_list" id="favlist_list<%=m.getF_id() %>" /> <label >
-										<strong><span class="name"><%=m.getFav_list_name() %></span></strong>
-										(<%=count_max %>    <%=m.getF_id()%> video) 
-								</label> <br>  
+					<h5 class="blackTitle">
+						<%=m.getFav_list_name() %>(<%=count_max %>
+						lists)
+					</h5>
+					<input type="radio" value="<%=m.getF_id()%>" name="favlist_list"
+						id="favlist_list<%=m.getF_id() %>" /> <label> <strong><span
+							class="name"><%=m.getFav_list_name() %></span></strong> (<%=count_max %> <%=m.getF_id()%>
+						video)
+					</label> <br>
 
-							
-							<%
+
+					<%
 	
 		}
 }
@@ -165,17 +167,17 @@ org.hibernate.Query,
 	}
 
  %>
- </form>
-						
-								
-							
-						
-						<div class="vsep"></div>
+				</form>
 
-						
-					</div>
-				</div>
+
+
+
+				<div class="vsep"></div>
+
+
 			</div>
-			
+		</div>
+	</div>
+
 </body>
 </html>

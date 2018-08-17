@@ -1,4 +1,4 @@
-<%@page import="com.HALAMB.Favorate_list"%>
+<%@page import="com.webmedia.model.Favorate_list"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -97,13 +97,13 @@
           <a class="image" href="http://localhost:8080/HALAMB/Download.html" target="_blank"><img src="E:\HOT\h6.jpg"  /></a>
        -->
 		<%@ page
-			import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA, java.util.ArrayList,
+			import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA, java.util.ArrayList,
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
  javax.imageio.ImageIO,
- java.io.File,com.HALAMB.User_profile_pic,
+ java.io.File,com.webmedia.model.User_profile_pic,
  java.awt.image.BufferedImage;"%>
 		<%ArrayList user= null,user2=null,user_f=null;
 		boolean flag=false;

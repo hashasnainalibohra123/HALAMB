@@ -1,5 +1,5 @@
 <%@page import="java.util.Date"%>
-<%@page import="com.HALAMB.FriendCount"%>
+<%@page import="com.webmedia.model.FriendCount"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -10,13 +10,13 @@
 </head>
 <body>
 	<%@ page
-		import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA, java.util.ArrayList,
+		import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA, java.util.ArrayList,
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,java.util.List,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
  javax.imageio.ImageIO,java.util.Calendar,
- java.io.File,com.HALAMB.User_profile_pic,
+ java.io.File,com.webmedia.model.User_profile_pic,
  java.awt.image.BufferedImage;"%>
 	<%ArrayList user = null,user12 = null;
 String str=request.getParameter("str");

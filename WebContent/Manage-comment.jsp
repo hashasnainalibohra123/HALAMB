@@ -9,13 +9,13 @@
 <body>
 
 	<%@ page
-		import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA, java.util.ArrayList,
-org.hibernate.Query,com.HALAMB.Comment_Table,
+		import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA, java.util.ArrayList,
+org.hibernate.Query,com.webmedia.model.Comment_Table,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
  javax.imageio.ImageIO,
- java.io.File,com.HALAMB.Upload_Profile_pic,com.HALAMB.User_profile_pic,
+ java.io.File,com.HALAMB.Upload_Profile_pic,com.webmedia.model.User_profile_pic,
  java.awt.image.BufferedImage;"%>
 	<h3 style="color: blue; text-align: center; text-indent: 50px;">Your
 		Comments</h3>

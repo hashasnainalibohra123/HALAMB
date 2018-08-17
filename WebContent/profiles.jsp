@@ -1,4 +1,4 @@
-<%@page import="com.HALAMB.USER_EXTRA_INFO"%>
+<%@page import="com.webmedia.model.USER_EXTRA_INFO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -188,13 +188,13 @@ function showFields()
   <link rel="stylesheet" href="/resources/demos/style.css" />
  
 <%@ page
-	import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA, java.util.ArrayList,
+	import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA, java.util.ArrayList,
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
  javax.imageio.ImageIO,com.HALAMB.Favorate_video_List,
- java.io.File,com.HALAMB.User_profile_pic,
+ java.io.File,com.webmedia.model.User_profile_pic,
  java.awt.image.BufferedImage;"%>
 
 
@@ -323,7 +323,7 @@ org.hibernate.Query,
 
 
 
-<meta name="keywords" content="HALAMB,HALAMB.com,HALAMB profiles" />
+<meta name="keywords" content="HALAMB,HALAMB.com.webmedia.model profiles" />
 <meta name="description"
 	content="HALAMB user profiles with pictures and more">
 <meta name="y_key" content="dbded0cbf8ead3a3">

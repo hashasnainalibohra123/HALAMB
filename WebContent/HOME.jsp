@@ -61,7 +61,7 @@
 
 		</div>
 		<%@ page
-			import="com.HALAMB.*,com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA,java.util.ArrayList,org.hibernate.Query,org.hibernate.Session,org.hibernate.SessionFactory,org.hibernate.cfg.AnnotationConfiguration;"%>
+			import="com.webmedia.model.*,com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA,java.util.ArrayList,org.hibernate.Query,org.hibernate.Session,org.hibernate.SessionFactory,org.hibernate.cfg.AnnotationConfiguration;"%>
 
 
 

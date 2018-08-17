@@ -56,14 +56,14 @@ public class USER_INFO {
 
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "id.u", cascade=CascadeType.ALL)
-     public Set<USER_INFO_IMAGE_DATA> getStudentClasses() {
+	public Set<USER_INFO_IMAGE_DATA> getStudentClasses() {
 		return studentClasses;
 	}
 	public void setStudentClasses(Set<USER_INFO_IMAGE_DATA> studentClasses) {
 		this.studentClasses = studentClasses;
 	}
 	@Id 
-@GeneratedValue
+	@GeneratedValue
 	public int getUser_id() {
 		return user_id;
 	}
@@ -138,5 +138,5 @@ public class USER_INFO {
 	public Date getDob1() {
 		return dob1;
 	}
-	
+
 }

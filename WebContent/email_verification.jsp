@@ -38,7 +38,7 @@
 			<div id="social">
 				<a href="http://www.HALAMBs.com/rss/rss.xml" target="_blank"><img
 					src="http://static.HALAMBs.com/v2/img/xv-rss.png"
-					alt="XML RSS feed" /></a> <a href="http://twitter.com/HALAMBscom"
+					alt="XML RSS feed" /></a> <a href="http://twitter.com.webmedia.modelscom"
 					target="_blank"><img
 					src="http://static.HALAMBs.com/v2/img/xv-red-twitter.png"
 					alt="HALAMBs on Twitter" /></a>
@@ -96,13 +96,13 @@
           <a class="image" href="http://localhost:8080/HALAMB/Download.html" target="_blank"><img src="E:\HOT\h6.jpg"  /></a>
        -->
 		<%@ page
-			import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA, java.util.ArrayList,
+			import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA, java.util.ArrayList,
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
  javax.imageio.ImageIO,
- java.io.File,com.HALAMB.User_profile_pic,
+ java.io.File,com.webmedia.model.User_profile_pic,
  java.awt.image.BufferedImage;"%>
 		<%ArrayList user= null,user2=null;
 		boolean flag=false;

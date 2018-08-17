@@ -9,11 +9,13 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
+import com.webmedia.model.FriendCount;
 import com.webmedia.model.IMAGE_DATA;
 import com.webmedia.model.PROFILE_COMMENT_TABLE;
 import com.webmedia.model.Privacy;
 import com.webmedia.model.USER_EXTRA_INFO;
 import com.webmedia.model.USER_INFO;
+import com.webmedia.model.USER_LANGUAGE;
 import com.webmedia.model.User_profile_pic;
 
 

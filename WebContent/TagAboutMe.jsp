@@ -11,13 +11,13 @@
 	<div id="idCard">
 		<div class="tabs">
 			<%@ page
-				import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA, java.util.ArrayList,
+				import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA, java.util.ArrayList,
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
  javax.imageio.ImageIO,java.util.Calendar,
- java.io.File,com.HALAMB.User_profile_pic,
+ java.io.File,com.webmedia.model.User_profile_pic,
  java.awt.image.BufferedImage;"%>
 			<%
 String user=request.getParameter("friend_id");

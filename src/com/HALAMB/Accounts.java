@@ -18,6 +18,7 @@ import org.hibernate.cfg.AnnotationConfiguration;
 import com.webmedia.model.Privacy;
 import com.webmedia.model.USER_EXTRA_INFO;
 import com.webmedia.model.USER_INFO;
+import com.webmedia.model.USER_LANGUAGE;
 
 /**
  * Servlet implementation class Accounts

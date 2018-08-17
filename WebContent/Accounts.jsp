@@ -1,5 +1,5 @@
-<%@page import="com.HALAMB.Privacy"%>
-<%@page import="com.HALAMB.USER_EXTRA_INFO"%>
+<%@page import="com.webmedia.model.Privacy"%>
+<%@page import="com.webmedia.model.USER_EXTRA_INFO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -41,7 +41,7 @@
 			<div id="social">
 				<a href="http://www.HALAMB.com/rss/rss.xml" target="_blank"><img
 					src="http://static.HALAMB.com/v2/img/xv-rss.png" alt="XML RSS feed" /></a>
-				<a href="http://twitter.com/HALAMBcom" target="_blank"><img
+				<a href="http://twitter.com.webmedia.modelcom" target="_blank"><img
 					src="http://static.HALAMB.com/v2/img/xv-red-twitter.png"
 					alt="HALAMB on Twitter" /></a>
 			</div>
@@ -98,13 +98,13 @@
           <a class="image" href="http://localhost:8080/HALAMB/Download.html" target="_blank"><img src="E:\HOT\h6.jpg"  /></a>
        -->
 		<%@ page
-			import="com.HALAMB.USER_INFO,com.HALAMB.User_insert_hibernate,com.HALAMB.IMAGE_DATA, java.util.ArrayList,
+			import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA, java.util.ArrayList,
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
- javax.imageio.ImageIO,com.HALAMB.Favorate_list,
- java.io.File,com.HALAMB.User_profile_pic,com.HALAMB.USER_EXTRA_INFO,com.HALAMB.USER_LANGUAGE"%>
+ javax.imageio.ImageIO,com.webmedia.model.Favorate_list,
+ java.io.File,com.webmedia.model.User_profile_pic,com.webmedia.model.USER_EXTRA_INFO,com.webmedia.model.USER_LANGUAGE"%>
 
 
 		<%ArrayList user= null,user2=null,user_l=null;
