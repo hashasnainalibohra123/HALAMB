@@ -1,0 +1,601 @@
+/* =============================================================================
+   STYLES FOR PUBLIC PROFILE PAGE
+============================================================================= */
+h2.profile_dont_exists {
+	color: #f00;
+	margin: 15px 0;
+	text-align: center;
+}
+
+#claim-pornstar-account {
+	margin: 2px 0 3px;
+	font-size: 10px;
+	color: #888;
+	text-align: center;
+}
+
+#claim-pornstar-account a {
+	color: #888;
+}
+
+/* ==== IDCARD ==== */
+#idCard .actions {
+	float: right;
+	margin: 3px 5px 0 0;
+}
+
+#idCard .actions a.button,#idCard .actions input[type="button"] {
+	margin: 0 0 0 10px;
+	font-weight: bold;
+	margin: 0 0 0 10px;
+	padding: 1px 6px;
+}
+
+/* ==== ACTIVITY ==== */
+.activity {
+	overflow: hidden;
+	*zoom: 1;
+}
+
+.activity a.thumb {
+	display: block;
+	overflow: hidden;
+	float: left;
+	margin-right: 10px;
+}
+
+.activity h4,.adminBox .contentbox .activity h4 {
+	overflow: hidden;
+	font-size: 13px;
+	margin: 0 0 10px 70px;
+	text-align: left;
+	font-weight: normal;
+}
+
+.activity h4 a {
+	font-weight: bold;
+}
+
+.activity h4 .datetime {
+	float: right;
+	font-size: 12px;
+	padding-left: 12px;
+}
+
+.activity h4 .datetime a {
+	font-weight: normal;
+}
+
+.activity p.datetime {
+	margin-bottom: 10px;
+}
+
+.activity p.datetime span {
+	border-bottom: 1px solid black;
+	padding: 0 30px 2px 0;
+}
+
+.activity.sticky p.datetime span {
+	padding-left: 20px;
+	background: transparent url('../img/sticky-pin.png') left center
+		no-repeat;
+}
+
+.activity p.datetime span sup {
+	color: blue;
+	font-weight: bold;
+}
+
+.activity p.datetime strong {
+	padding: 0 0 2px 0;
+	color: #444;
+	font-size: 12px;
+}
+
+.activity.expanded p.datetime strong {
+	display: none;
+}
+
+.activity div.content {
+	overflow: hidden;
+}
+
+.activity.expandable div.content {
+	display: none;
+}
+
+.activity.expandable.expanded div.content {
+	display: block;
+}
+
+.activity .profilesGalleries {
+	margin: 0;
+}
+
+.activity .profilesGalleries.smallThumbs .thumbProfile {
+	padding: 2px;
+	width: 80px;
+}
+
+.activity .profilesGalleries.squareThumbs .thumbProfile {
+	padding: 2px;
+}
+
+.activity .profilesGalleries.squareThumbs .thumbProfile:hover {
+	background: none;
+}
+
+.mozaique.smallThumbs .thumbBlock.more {
+	width: auto;
+	text-align: left;
+	float: none;
+}
+
+/* ==== TABS ==== */
+#profileTabs {
+	border: 1px solid #000;
+	padding: 4px 4px 10px;
+	margin-top: 6px;
+}
+
+#profileTabs .tabButtons {
+	background: #DE2600;
+	border: 1px solid #000;
+	padding: 4px 4px 0;
+	overflow: visible;
+}
+
+#profileTabs .tabButtons:before,#profileTabs .tabButtons:after {
+	content: "";
+	display: table;
+}
+
+#profileTabs .tabButtons:after {
+	clear: both;
+}
+
+#profileTabs .tabButtons {
+	*zoom: 1;
+}
+
+#profileTabs .tabButtons .headtab {
+	border: 1px solid #000;
+	border-bottom: none;
+	background: #000;
+	color: #fff;
+	padding: 6px 10px 7px;
+	margin-bottom: -1px;
+	margin-right: 7px;
+}
+
+#profileTabs .tabButtons .headtab.selected,#profileTabs .tabButtons .headtab:hover
+	{
+	background: #fff;
+	color: #000;
+}
+
+#profileTabs .tabButtons .headtab a,#profileTabs .tabButtons .headtab a:visited
+	{
+	color: #fff;
+}
+
+#profileTabs .tabButtons .headtab.selected a,#profileTabs .tabButtons .headtab:hover a,#profileTabs .tabButtons .headtab a:hover
+	{
+	color: #000;
+}
+
+#profileTabs .tabButtons .headtab .count {
+	font-size: 11px;
+	font-weight: bold;
+	padding-left: 4px;
+	vertical-align: top;
+	line-height: 13px;
+}
+
+#profileTabs .tabs {
+	margin-top: 0;
+}
+
+#profileTabs .tabs .tab {
+	background: none;
+	border: none;
+	padding: 4px 0 0;
+}
+
+/* ==== INLINE EDIT ==== */
+#profileTabs .profile-actions {
+	text-align: right;
+	overflow: hidden;
+	zoom: 1;
+	margin: 0 0 -6px;
+}
+
+.profile-popup-settings .xv-popup-entry label {
+	width: 200px;
+	padding: 5px 0 0;
+}
+
+.profile-popup-settings .xv-popup-entry .content {
+	padding-left: 210px;
+}
+
+.profile-popup-settings select {
+	width: 180px;
+}
+
+.profile-popup-edit .xv-popup-content {
+	padding-top: 10px;
+}
+
+.profile-popup-edit .xv-popup-column-left {
+	width: 398px;
+}
+
+.profile-popup-edit .content input[type="text"] {
+	width: 200px;
+}
+
+.profile-popup-edit .content select {
+	width: 220px;
+}
+
+.profile-popup-edit #day_select,.profile-popup-edit #month_select,.profile-popup-edit #year_select
+	{
+	width: auto;
+}
+
+.profile-popup-edit .form_field_body_unit {
+	float: right;
+	padding: 10px 0 10px 5px;
+	margin: 3px 3px 0px 0px;
+	border-left: 1px solid #000;
+}
+
+.profile-popup-edit #height_text,.profile-popup-edit #weight_text {
+	width: 50px;
+}
+
+.profile-popup-edit .profile-tags {
+	margin-left: -140px;
+}
+
+.profile-popup-edit a.button.profile-tag-showall {
+	padding: 3px 2px 1px;
+}
+
+/* ==== TAB: ABOUT ME ==== */
+#profileTabs .tabs #tabAboutMe.tab {
+	padding-top: 14px;
+	overflow: hidden;
+	*zoom: 1;
+}
+
+#profileTabs #tabAboutMe .profile-actions {
+	margin-top: -10px;
+}
+
+#tabAboutMe .column_left {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+#profilePic {
+	border: 1px solid #000;
+	position: relative;
+	border: 1px solid #000;
+	margin: 0 0 10px 0;
+	min-height: 100px;
+	width: 242px;
+}
+
+#profilePicEdit {
+	background: #000;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 55%;
+	padding: 45% 0 0;
+	text-align: center;
+	display: none;
+}
+
+#profilePic:hover #profilePicEdit {
+	display: block;
+}
+
+#profilePicEdit a {
+	color: #fff;
+}
+
+#tabAboutMe #tabVote {
+	padding: 2px 0;
+}
+
+#tabAboutMe .column_left .infoBox {
+	width: 222px;
+	margin-top: 10px;
+}
+
+#tabAboutMe .tabHeaderForm {
+	font-size: 12px;
+	margin-top: 10px;
+	width: 216px;
+}
+
+#tabAboutMe .tabHeaderForm table {
+	font-size: 12px;
+	width: 216px;
+}
+
+#tabAboutMe .tabHeaderForm th,#tabAboutMe .tabHeaderForm td {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+#tabAboutMe .tabHeaderForm td {
+	text-align: right;
+}
+
+#tabAboutMe .tabHeaderForm input[type="submit"] {
+	margin-top: 5px;
+	font-weight: bold;
+}
+
+#tabAboutMe .tabHeaderForm .forgot_password {
+	margin-top: 2px;
+	font-size: 11px;
+	line-height: 12px;
+}
+
+#tabAboutMe .tabHeaderForm a.button {
+	float: right;
+	margin-top: 5px;
+	padding: 1px 10px;
+	font-weight: bold;
+	color: #ff0000;
+}
+
+#tabAboutMe .infos .infoBox {
+	font-size: 13px;
+	line-height: 15px;
+}
+
+#tabAboutMe .infos {
+	font-size: 14px;
+	overflow: hidden;
+	*zoom: 1;
+}
+
+#tabAboutMe .infos .column0 {
+	float: left;
+	width: 35%;
+	padding-right: 1%;
+}
+
+#tabAboutMe .infos .column0,#tabAboutMe .infos .column1 {
+	margin-bottom: 10px;
+	overflow: hidden;
+	*zoom: 1;
+}
+
+#tabAboutMe .infos strong {
+	padding-right: 5px;
+}
+
+#tabAboutMe .pornstars_hit_rankings {
+	margin: 0.7em 0px 1em;
+}
+
+#tabAboutMe .pornstars_hit_rankings p {
+	margin-bottom: 0px;
+}
+
+#tabAboutMe .infos .aboutme {
+	border: 1px solid #999;
+	padding: 2px 6px;
+	background: #eee;
+}
+
+#tabAboutMe .infos .aboutme.missing {
+	border-color: #f00;
+}
+
+#tabAboutMe .infos .aboutme span.tip {
+	color: #444;
+	font-size: 12px;
+	display: block;
+	font-style: italic;
+	padding-top: 10px;
+}
+
+#tabAboutMe .infos .aboutme.missing span.tip {
+	color: #f00;
+	font-size: 12px;
+	display: inline;
+	font-style: normal;
+	padding-top: 0;
+}
+
+#tabAboutMe .infos .aboutme.editing span.tip,#tabAboutMe .infos .aboutme.editing span.value,#tabAboutMe .infos .aboutme.missing span.value,#tabAboutMe .infos .aboutme span.edit
+	{
+	display: none;
+}
+
+#tabAboutMe .infos .aboutme.editing span.edit {
+	display: inline;
+}
+
+#tabAboutMe .infos .aboutme.editing {
+	text-align: right;
+}
+
+#tabAboutMe .infos .aboutme textarea {
+	width: 100%;
+	border: none;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+
+#tabAboutMe .infos .aboutme input {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 5px 0;
+	padding: 2px 8px;
+}
+
+#tabAboutMe .blockReportActions {
+	text-align: right;
+	font-size: 11px;
+	margin-top: 10px;
+	overflow: hidden;
+	clear: both;
+	*zoom: 1;
+}
+
+#tabAboutMe .blockReportActions input[type="button"] {
+	margin: 0 0 0 10px;
+	padding: 2px 6px;
+}
+
+#tabAboutMe .activity div.content {
+	padding-left: 10px;
+}
+
+/* ==== REPORT USER ==== */
+#form_report_profile h3 {
+	margin-bottom: 20px;
+}
+
+#form_report_profile .formLine {
+	text-align: left;
+}
+
+#form_report_profile .field_report_reason label {
+	padding: 0 10px 0 5px;
+}
+
+#form_report_profile_login .formLine label,#form_report_profile .field_report_reason_text label
+	{
+	width: 75px;
+}
+
+#form_report_profile_login .formLine .content,#form_report_profile .field_report_reason_text .content
+	{
+	padding-left: 80px;
+}
+
+#form_report_profile .field_report_confirm label {
+	padding-left: 5px;
+}
+
+#form_report_profile .formActions {
+	text-align: left;
+}
+
+#form_report_profile #report_submit,#form_report_profile_login .report_login,#form_report_profile_login .report_register
+	{
+	float: right;
+	line-height: 16px;
+}
+
+#form_report_profile_login .report_forgot_pwd {
+	font-size: 13px;
+}
+
+/* ==== TAB: FRIENDS/FANS ==== */
+#fans .thumbProfile,#friends .thumbProfile {
+	position: relative;
+	overflow: visible;
+}
+
+#fans .profilesGalleries .thumbProfile.more {
+	overflow: hidden;
+	margin-top: 48px;
+}
+
+#fans .thumbProfile .profileInfo,#friends .thumbProfile .profileInfo {
+	font-size: 13px;
+	margin: 0;
+}
+
+#fans .thumbProfile .friendCounts,#friends .thumbProfile .friendCounts {
+	background: #000;
+	background: rgba(30, 30, 30, 0.9);
+	font-size: 11px;
+	line-height: 12px;
+	left: 65px;
+	overflow: hidden;
+	position: absolute;
+	top: 55px;
+	text-align: left;
+	white-space: nowrap;
+	display: none;
+	box-shadow: 0 0 2px rgba(30, 30, 30, 0.8);
+	padding: 3px 10px;
+}
+
+#fans .thumbProfile:hover .friendCounts,#friends .thumbProfile:hover .friendCounts
+	{
+	display: block;
+}
+
+#fans .thumbProfile:hover .friendCounts a,#fans .thumbProfile:hover .friendCounts a:visited,#friends .thumbProfile .friendCounts a,#friends .thumbProfile .friendCounts a:visited
+	{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/* ==== TAB: PICTURES ==== */
+#pictures_albums_back input {
+	margin: 0 0 10px;
+}
+
+#galsList .thumbProfile .thumb,#galsList .thumbProfile .profileName {
+	cursor: pointer;
+}
+
+/* ==== TAB: VIDEOS ==== */
+.tab .mozaique .thumbBlock {
+	background: transparent;
+	border: none;
+	width: 20%;
+}
+
+/* ==== TAB: COMMENT ME ==== */
+#tabCommentMe .tabHeaderForm {
+	margin-bottom: 20px;
+}
+
+#tabCommentMe #wallAddPost {
+	margin: 0 auto 20px;
+	width: 800px;
+}
+
+#tabCommentMe #wallAddPost label {
+	font-size: 14px;
+}
+
+#tabCommentMe #wallAddPost textarea {
+	width: 96%;
+}
+
+#tabCommentMe #wallAddPost input[type="button"] {
+	font-weight: bold;
+}
+
+/* ==== TAB: ACTIVITY ==== */
+#profileTabs #tabActivity.tab .profile-actions {
+	margin: 0 0 10px;
+}
+
+/* ==== TAB: SHARE ==== */
+#tabShare #shareButtons {
+	margin: 20px auto 0;
+	width: 500px;
+}

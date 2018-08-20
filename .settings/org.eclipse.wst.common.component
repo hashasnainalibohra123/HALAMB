@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-	<wb-module deploy-name="HALAMB-0.0.1-SNAPSHOT">
-        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+	<wb-module deploy-name="vvvvvvvvvvvvvvvvvvvvv-0.0.1-SNAPSHOT">
+        <wb-resource deploy-path="/" source-path="/WebContent"/>
         <wb-resource deploy-path="/" source-path="/META-INF"/>
         <wb-resource deploy-path="/" source-path="/build/classes"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
-		<property name="context-root" value="HALAMB"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp"/>
 		<property name="java-output-path" value="/HALAMB/build/classes"/>
+        <property name="context-root" value="vvvvvvvvvvvvvvvvvvvvv"/>
 	</wb-module>
 </project-modules>
