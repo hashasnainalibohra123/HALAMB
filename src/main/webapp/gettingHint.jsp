@@ -12,7 +12,7 @@
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,com.HALAMB.Upload_Profile_pic,com.webmedia.model.USER_INFO_IMAGE_DATA,
-   org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
+   com.webmedia.services.DBService, java.io.IOException,
  javax.imageio.ImageIO,java.util.Date,
  java.io.File,com.webmedia.model.Comment_Table,
  java.awt.image.BufferedImage;"%>
@@ -60,25 +60,9 @@ email=(String) httpsession.getAttribute("email");
  
  
  //......setting values to comment_table..............//
-AnnotationConfiguration config12=new AnnotationConfiguration();
-config12.addAnnotatedClass(USER_INFO.class);
-config12.addAnnotatedClass(IMAGE_DATA.class);
-config12.addAnnotatedClass(User_profile_pic.class);
-config12.addAnnotatedClass(Comment_Table.class);
-config12.configure("hibernate.cfg.xml");
-SessionFactory factory=config12.buildSessionFactory();
+SessionFactory factory = DBService.getFacotorySession();
 Session session12=factory.getCurrentSession();
 session12.beginTransaction();
-
-
-
-/*AnnotationConfiguration config=new AnnotationConfiguration();
-//config.addAnnotatedClass();
-config.configure("hibernate.cfg.xml");
-new SchemaExport(config).create(true,true);
-SessionFactory factory=config.buildSessionFactory();
-Session session=factory.getCurrentSession();
-session.beginTransaction();*/
 
 Comment_Table comment=new Comment_Table();
 comment.setComment(comments);

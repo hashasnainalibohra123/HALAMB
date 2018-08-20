@@ -11,11 +11,10 @@
 		import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA, java.util.ArrayList,
 org.hibernate.Query,
  org.hibernate.Session,
-  org.hibernate.SessionFactory,
-   org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
+  org.hibernate.SessionFactory, java.io.IOException,
  javax.imageio.ImageIO,java.util.Calendar,
  java.io.File,com.webmedia.model.User_profile_pic,
- java.awt.image.BufferedImage;"%>
+ java.awt.image.BufferedImage"%>
 	<%
 String str=request.getParameter("str");
 

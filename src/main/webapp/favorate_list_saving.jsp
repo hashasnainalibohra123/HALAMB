@@ -22,9 +22,9 @@
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,com.HALAMB.Upload_Profile_pic,com.webmedia.model.USER_INFO_IMAGE_DATA,
-   org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
+   com.webmedia.services.DBService, java.io.IOException,
  javax.imageio.ImageIO,java.util.Date,
- java.io.File,com.webmedia.model.Comment_Table,com.HALAMB.Favorate_video_List,
+ java.io.File,com.webmedia.model.Comment_Table,com.webmedia.model.Favorate_video_List,
  java.awt.image.BufferedImage;"%>
 <body>
 
@@ -65,16 +65,8 @@ int  fav_id=0;
 
 queryString="from USER_INFO where email='"+email+"'";
  
- //......setting values to comment_table..............//
-AnnotationConfiguration config12=new AnnotationConfiguration();
-config12.addAnnotatedClass(USER_INFO.class);
-config12.addAnnotatedClass(IMAGE_DATA.class);
-config12.addAnnotatedClass(User_profile_pic.class);
-config12.addAnnotatedClass(Comment_Table.class);
-config12.addAnnotatedClass(Favorate_video_List.class);
-config12.addAnnotatedClass(Favorate_list.class);
-config12.configure("hibernate.cfg.xml");
-SessionFactory factory=config12.buildSessionFactory();
+
+SessionFactory factory = DBService.getFacotorySession();
 Session session12=factory.getCurrentSession();
 session12.beginTransaction();
 Favorate_list fav=new Favorate_list();

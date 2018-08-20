@@ -101,7 +101,7 @@
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
-   org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
+   com.webmedia.services.DBService, java.io.IOException,
  javax.imageio.ImageIO,
  java.io.File,com.webmedia.model.User_profile_pic,
  java.awt.image.BufferedImage;"%>
@@ -116,18 +116,7 @@ org.hibernate.Query,
 	 System.out.println("TEST "+session_f);
 		String exist;
 	 //......ANNOTATION CONFIGURATION.............//
-	 	AnnotationConfiguration config1=new AnnotationConfiguration();
-	
-		
-		
-		
-		
-		//config.addAnnotatedClass();
-			config1.addAnnotatedClass(IMAGE_DATA.class);
-			config1.addAnnotatedClass(Favorate_list.class);
-		config1.configure("hibernate.cfg.xml");
-		//new SchemaExport(config).create(true,true);
-		SessionFactory factory=config1.buildSessionFactory();
+		SessionFactory factory = DBService.getFacotorySession(); 
 	
 	 
 	 

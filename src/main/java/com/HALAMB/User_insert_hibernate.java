@@ -118,6 +118,7 @@ public class User_insert_hibernate {
 				u2=u1;
 			}
 			session.getTransaction().commit();
+			session.close();
 
 		}
 		catch(Exception e)

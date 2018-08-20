@@ -13,7 +13,7 @@
 org.hibernate.Query,com.webmedia.model.Comment_Table,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
-   org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
+ com.webmedia.services.DBService, java.io.IOException,
  javax.imageio.ImageIO,
  java.io.File,com.HALAMB.Upload_Profile_pic,com.webmedia.model.User_profile_pic,
  java.awt.image.BufferedImage;"%>
@@ -85,12 +85,7 @@ org.hibernate.Query,com.webmedia.model.Comment_Table,
 			 	try
 				{//	
 			 		
-					AnnotationConfiguration config1=new AnnotationConfiguration();
-				//config.addAnnotatedClass();
-					config1.addAnnotatedClass(IMAGE_DATA.class);
-					config1.addAnnotatedClass(Comment_Table.class);
-				config1.configure("hibernate.cfg.xml");
-				SessionFactory factory=config1.buildSessionFactory();
+				SessionFactory factory=DBService.getFacotorySession();
 				Session session112=factory.getCurrentSession();
 				session112.beginTransaction();
 			
@@ -301,11 +296,7 @@ org.hibernate.Query,com.webmedia.model.Comment_Table,
 	 	try
 		{//	
 	 		
-			AnnotationConfiguration config11=new AnnotationConfiguration();
-			config11.addAnnotatedClass(User_profile_pic.class);
-			config11.configure("hibernate.cfg.xml");
-			System.out.println("build session factory");
-			SessionFactory factory1=config1.buildSessionFactory();
+			SessionFactory factory1 = DBService.getFacotorySession();
 			Session session1121=factory.getCurrentSession();
 			session1121.beginTransaction();
 			System.out.println("Testsdfsfssdfsd123");

@@ -1,6 +1,5 @@
+<%@page import="java.util.logging.Logger"%>
 <%@page import="com.webmedia.model.USER_EXTRA_INFO"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
@@ -180,150 +179,111 @@ function showFields()
              reqObj.send(null);
                   }
         </script>
-         <link rel="stylesheet" href="ui.css">
-  <link rel="stylesheet" href="ui.progress-bar.css">
-  <link media="only screen and (max-device-width: 480px)" href="ios.css" type="text/css" rel="stylesheet" />
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css" />
- 
+<link rel="stylesheet" href="ui.css">
+<link rel="stylesheet" href="ui.progress-bar.css">
+<link media="only screen and (max-device-width: 480px)" href="ios.css"
+	type="text/css" rel="stylesheet" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
+
 <%@ page
 	import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA, java.util.ArrayList,
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
-   org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
- javax.imageio.ImageIO,com.HALAMB.Favorate_video_List,
- java.io.File,com.webmedia.model.User_profile_pic,
- java.awt.image.BufferedImage;"%>
+   com.webmedia.services.DBService, java.io.IOException,
+ javax.imageio.ImageIO,com.webmedia.model.Favorate_video_List,
+ java.io.File,com.webmedia.model.User_profile_pic"%>
 
 
 
 
 
 <title></title>
-<%ArrayList user = null,user1 = null,user_f=null;
-	
-  HttpSession session12=request.getSession(false);
+<%
+	ArrayList user = null, user1 = null, user_f = null;
+
+	HttpSession session12 = request.getSession(false);
 	User_insert_hibernate h;
 	USER_EXTRA_INFO ux;
 	IMAGE_DATA i;
-	USER_INFO u,Acu;
-	boolean flag=false;
-	String profile_id=(String)request.getParameter("u_id");
-	if(profile_id=="" || profile_id==null)
-	{
-		System.out.println("profile_id is NuLL@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-		
-	}
-	
+	USER_INFO u, Acu;
+	boolean flag = false;
+	String profile_id = (String) request.getParameter("u_id");
 	int image_id;
-	String session1,session2;
+	String session1, session2;
 	String folder;
-	System.out.println("TESR");
-	
-	if(session12==null)
-	{
-		
-		
-		System.out.println("You have to login first");
 
-	
-		//getServletContext().getRequestDispatcher("/login.html").forward(request, response);
+	if (session12 == null) {
+
+		getServletContext().getRequestDispatcher("/login.html").forward(request, response);
 		destroy();
-		
-	}
-	else
-	{
-		
-		session1=(String) session12.getAttribute("email");
-		 session2=(String) session12.getAttribute("password");
-		 System.out.println();
-		 System.out.println("this is IN THE USER_UPLOAD_IMAGES"+session1);
-		 System.out.println("this is IN THE USER_UPLOAD_IMAGES"+session2);
-		 if(session1==null &&  session2==null)
-		{		System.out.println("In the Upload Area "+session1+"   "+session2);
-		//getServletContext().getRequestDispatcher("/login.html").forward(request, response);
-	}
-		 String queryString;
-			if(profile_id!="" && profile_id!=null)
-			{
-				System.out.println("profile_id is not NuLL");
-				System.out.println("profile id is"+profile_id);
-				session.setAttribute("profile_id",profile_id);
-				 queryString="from USER_INFO where user_id='"+profile_id+"'";
-							
-			}
-			else{
-				System.out.println("profile_id is  NuLL");
-				queryString="from USER_INFO where email='"+session1+"'";
-				
-			}
-		 h=new User_insert_hibernate();
-		 
-		 u=h.UserLogin(queryString);
-		 Acu=u;
-		 if(!queryString.equals("from USER_INFO where email='"+session1+"'"))
-				 {
-					 Acu=h.UserLogin("from USER_INFO where email='"+session1+"'");
-					 flag=true;
-					 session12.setAttribute("flag","true");
-				 }
-		 else
-		 {
-			 session12.setAttribute("flag","false");
-		 }
-  
-  try
-	{//	try -else
 
-		AnnotationConfiguration config1=new AnnotationConfiguration();
-	//config.addAnnotatedClass();
-		config1.addAnnotatedClass(IMAGE_DATA.class);
-		config1.addAnnotatedClass(User_profile_pic.class);
-		config1.addAnnotatedClass(Favorate_video_List.class);
-	config1.configure("hibernate.cfg.xml");
-	//new SchemaExport(config).create(true,true);
-	SessionFactory factory=config1.buildSessionFactory();
-	Session session11=factory.getCurrentSession();
-	session11.beginTransaction();
-	
-	String q12;
-	if(profile_id!="" || profile_id!=null)
-	{
-	q12="  from User_profile_pic where user_id='"+u.getUser_id()+"' ";
-	}
-	else
-	{
-		q12="  from User_profile_pic where user_id='"+u.getUser_id()+"' ";
-	}
-	
-	
-		Query q=session11.createQuery(q12);
-		q.setMaxResults(1);
-		//List user=q.list();
-		
-					user=(ArrayList) q.list();
-	System.out.println("hello the size is:"+user.size());
-	
-	
-	if(user!=null && user.size()>0)
-	{
-		for(int i1=0;i1<user.size();i1++)
-		{
-			User_profile_pic m=(User_profile_pic)user.get(i1);
-			
-			System.out.println("The LINK TO IMAGE IS:"+m.getLink());
-			q=session11.createQuery("from Favorate_list where user_id="+u.getUser_id());
-			user_f=(ArrayList)q.list();
-			%>
+	} else {
+
+		session1 = (String) session12.getAttribute("email");
+		session2 = (String) session12.getAttribute("password");
+		if (session1 == null && session2 == null) {
+			System.out.println("In the Upload Area " + session1 + "   " + session2);
+			getServletContext().getRequestDispatcher("/login.html").forward(request, response);
+		}
+		String queryString;
+		if (profile_id != "" && profile_id != null) {
+			System.out.println("profile_id is not NuLL");
+			System.out.println("profile id is" + profile_id);
+			session.setAttribute("profile_id", profile_id);
+			queryString = "from USER_INFO where user_id='" + profile_id + "'";
+
+		} else {
+			System.out.println("profile_id is  NuLL");
+			queryString = "from USER_INFO where email='" + session1 + "'";
+
+		}
+		h = new User_insert_hibernate();
+
+		u = h.UserLogin(queryString);
+		Acu = u;
+		if (!queryString.equals("from USER_INFO where email='" + session1 + "'")) {
+			Acu = h.UserLogin("from USER_INFO where email='" + session1 + "'");
+			flag = true;
+			session12.setAttribute("flag", "true");
+		} else {
+			session12.setAttribute("flag", "false");
+		}
+
+		try {//	try -else
+
+			SessionFactory factory = DBService.getFacotorySession();
+			Session session11 = factory.getCurrentSession();
+			session11.beginTransaction();
+
+			String q12;
+				q12 = "  from User_profile_pic where user_id=" + u.getUser_id() + " ";
+
+			Query q = session11.createQuery(q12);
+			q.setMaxResults(1);
+			//List user=q.list();
+
+			user = (ArrayList) q.list();
+			System.out.println("hello the size is:" + user.size());
+
+			if (user != null && user.size() > 0) {
+				for (int i1 = 0; i1 < user.size(); i1++) {
+					User_profile_pic m = (User_profile_pic) user.get(i1);
+
+					System.out.println("The LINK TO IMAGE IS:" + m.getLink());
+					q = session11.createQuery("from Favorate_list where user_id=" + u.getUser_id());
+					user_f = (ArrayList) q.list();
+%>
 
 <%-- 			<A href="Download?Image_Id=<%=m.getImage_id() %>"><img src="\<%=m.getLink() %>" width="200" height="200" /></A>
  --%>
 
 
 
-<meta name="keywords" content="HALAMB,HALAMB.com.webmedia.model profiles" />
+<meta name="keywords"
+	content="HALAMB,HALAMB.com.webmedia.model profiles" />
 <meta name="description"
 	content="HALAMB user profiles with pictures and more">
 <meta name="y_key" content="dbded0cbf8ead3a3">
@@ -347,7 +307,7 @@ org.hibernate.Query,
 </head>
 <body>
 	<div id="page">
-		<input type="hidden" id="pr" value="<%=u.getUser_id() %>">
+		<input type="hidden" id="pr" value="<%=u.getUser_id()%>">
 		<header>
 		<div class="whiteStripe clearfix">
 			<a href="/" title="HALAMB Home" id="mainLogo">
@@ -367,7 +327,7 @@ org.hibernate.Query,
 
 		<div class="blackStripe clearfix" id="secondaryMenu">
 			<p>
-				<%=Acu.getEmail() %>
+				<%=Acu.getEmail()%>
 				| <a href="profiles.jsp"><b>My Profile</b></a> | <a
 					href="Accounts.jsp"><b>My account</b></a> | <a href="Logout">Log
 					out</a>
@@ -394,26 +354,26 @@ org.hibernate.Query,
 
 			<div id="idCard">
 				<h2>
-					<%=u.getUser_name() %>
+					<%=u.getUser_name()%>
 				</h2>
 
 				<p class="sexAgeCountry" id="profile_info_sex_age_country">
-					<span> <%=u.getSex() %>, <%=u.getAge() %> years old from <%=u.getCity() %>,
-						<%=u.getCountry() %>
+					<span> <%=u.getSex()%>, <%=u.getAge()%> years old from <%=u.getCity()%>,
+						<%=u.getCountry()%>
 					</span>
 				</p>
 
-				<% if(flag==false)
-				{%>
+				<%
+					if (flag == false) {
+				%>
 
 				<div class="actions">
 					<span id="profile_friendship"> </span> <a class="button"
 						href="Accounts.jsp">Edit</a>
 				</div>
-				<%}
-				else
-				{
-				 %>
+				<%
+					} else {
+				%>
 
 				<div class="actions">
 					<span id="profile_friendship"> </span> <a class="button"
@@ -422,8 +382,7 @@ org.hibernate.Query,
 			</div>
 			<%
 				}
-				
-				%>
+			%>
 			<div id="profileTabs" class="tabsContainer">
 				<ul class="tabButtons">
 					<li id="about me" onclick="varify(<%=u.getUser_id()%>);"
@@ -435,7 +394,9 @@ org.hibernate.Query,
 					<li data-ref="tabPictures" class="headtab">Photos (0)</li>
 					<li data-ref="tabFavorites" class="headtab"
 						data-onshow="HALAMB.profiles.getTabData"
-						 onclick="varify12(<%=u.getUser_id()%>);">Favorites (<%=user_f.size() %> List) </li>
+						onclick="varify12(<%=u.getUser_id()%>);">Favorites (<%=user_f.size()%>
+						List)
+					</li>
 					<li data-ref="tabCommentMe" class="headtab"
 						onclick="varify1(<%=u.getUser_id()%>);"
 						data-onshow="HALAMB.profiles.getTabData">Comments</li>
@@ -534,21 +495,17 @@ org.hibernate.Query,
 			</p>
 		</div>
 		<%
-  }
-	}
-	
-	
-	
-	}
-	
-	
-	catch(Exception e)
-	{
-		
-		System.out.println("Error  due to "+e);
-	}
-	}
-%>
+			}
+					}
+
+				}
+
+				catch (Exception e) {
+
+					System.out.println("Error  due to " + e);
+				}
+			}
+		%>
 
 		<footer>
 		<div class="botLinks">
@@ -590,9 +547,6 @@ org.hibernate.Query,
 
 	<script src="http://static.HALAMB.com/v2/js/script-viewer.js?v=3"></script>
 
-	<script type="text/javascript" language="javascript">
-    HALAMB.cookies.set("DISPLAY_PREF", "body_unit=EU", 1, "/", "HALAMB.com", false);
-  </script>
 
 </body>
 </html>

@@ -1,12 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
 <!--<![endif]-->
 <head>
@@ -28,9 +19,8 @@
 	src="http://static.HALAMBs.com/v2/js/libs/modernizr-2.6.2.min.js"></script>
 <script src="http://static.HALAMBs.com/v2/js/script-head.js?v=4"></script>
 <script>
-	var profile_name = "hasnain123";
-	var page_type = "EMAIL";
-</script>
+    var profile_name = "hasnain123";    var page_type = "EMAIL";
+  </script>
 </head>
 <body>
 	<div id="page">
@@ -39,8 +29,8 @@
 			<div id="social">
 				<a href="http://www.HALAMBs.com/rss/rss.xml" target="_blank"><img
 					src="http://static.HALAMBs.com/v2/img/xv-rss.png"
-					alt="XML RSS feed" /></a> <a
-					href="http://twitter.com.webmedia.modelscom" target="_blank"><img
+					alt="XML RSS feed" /></a> <a href="http://twitter.com.webmedia.modelscom"
+					target="_blank"><img
 					src="http://static.HALAMBs.com/v2/img/xv-red-twitter.png"
 					alt="HALAMBs on Twitter" /></a>
 			</div>
@@ -104,40 +94,50 @@ com.webmedia.services.DBService,
   org.hibernate.SessionFactory,
    com.webmedia.services.DBService, java.io.IOException,
  javax.imageio.ImageIO,
- java.io.File,com.webmedia.model.User_profile_pic,
- java.awt.image.BufferedImage;"%>
-		<%
-			ArrayList user = null, user2 = null;
-			boolean flag = false;
-			//.....boolean for ID checking........//
-			boolean flag1 = false;
+ java.io.File,com.webmedia.model.User_profile_pic"%>
+		<%ArrayList user= null,user2=null;
+		boolean flag=false;
+      //.....boolean for ID checking........//
+      boolean flag1=false;
+		
+		//.....checking for SESSSION >>>
+  	 String session1_f,session2_f;
+	 HttpSession session_f=request.getSession(false);
+	 System.out.println("TEST "+session_f);
+	
 
-			//.....checking for SESSSION >>>
-			String session1_f, session2_f;
-			HttpSession session_f = request.getSession(false);
-			System.out.println("TEST " + session_f);
+		//new SchemaExport(config).create(true,true);
+		SessionFactory factory = DBService.getFacotorySession();
+	 
+	 
+	 
+	 if(session_f==null)
+	{
+		
+		
+		System.out.println("You have to login first");
+		HttpSession session123=request.getSession();
+//session123.setAttribute("from","upload" );
+//session.setAttribute("password",r.getPass());
 
-			//new SchemaExport(config).create(true,true);
-			SessionFactory factory = DBService.getFacotorySession();
 
-			if (session_f == null) {
-
-				System.out.println("You have to login first");
-				HttpSession session123 = request.getSession();
-				//session123.setAttribute("from","upload" );
-				//session.setAttribute("password",r.getPass());
-
-				//	getServletContext().getRequestDispatcher("/login.html").forward(request, response);
-				destroy();
-
-			} else {
-
-				session1_f = (String) session.getAttribute("email");
-				session2_f = (String) session.getAttribute("password");
-				HttpSession session123 = request.getSession();
-				session123.setAttribute("from", "home");
-				if (session1_f == null && session2_f == null) {
-					System.out.println("In the Upload Area " + session1_f + "   " + session2_f);
+	
+	//	getServletContext().getRequestDispatcher("/login.html").forward(request, response);
+		destroy();
+		
+	}
+	else
+	{
+		
+		session1_f=(String) session.getAttribute("email");
+		 session2_f=(String) session.getAttribute("password");
+			HttpSession session123=request.getSession();
+			session123.setAttribute("from","home" ); 
+		if(session1_f==null &&  session2_f==null)
+		{		System.out.println("In the Upload Area "+session1_f+"   "+session2_f);
+	
+			
+		
 		%>
 
 
@@ -151,63 +151,72 @@ com.webmedia.services.DBService,
 
 
 		<%
-			//getServletContext().getRequestDispatcher("/login.html").forward(request, response);
-				} else {
-					//getServletContext().getRequestDispatcher("/Upload_Image.jsp").forward(request, response);
-					flag = true;
+		//getServletContext().getRequestDispatcher("/login.html").forward(request, response);
+	}
+		else
+		{
+		//getServletContext().getRequestDispatcher("/Upload_Image.jsp").forward(request, response);
+				flag=true;
 
-					USER_INFO u = new USER_INFO();
-					String queryString = "from USER_INFO where email='" + session1_f + "'";
-					User_insert_hibernate s = new User_insert_hibernate();
-					u = s.UserLogin(queryString);
-					System.out.println("Your pass word is" + u.getPass());
-					String folder = u.getUser_id() + "." + u.getUser_name() + File.separator + "profile_pic";
-					System.out.println("YOUR FOLDER IS" + folder);
 
-					queryString = "from User_profile_pic where user_id='" + u.getUser_id() + "'";
-
-					User_profile_pic p = new User_profile_pic();
-					try {//	
-
-						Session session112 = factory.getCurrentSession();
-						session112.beginTransaction();
-						System.out.println("Testsdfsfssdfsd123");
-						Query q = session112.createQuery(queryString);
-						q.setMaxResults(1);
-						user = (ArrayList) q.list();
-						System.out.println("hello the size is:" + user.size());
-						System.out.println("Test12345");
-
-						if (user != null && user.size() > 0) {
-							for (int i1 = 0; i1 < user.size(); i1++) {
-								User_profile_pic m = (User_profile_pic) user.get(i1);
-								System.out.println("THE m.getImage Name is" + m.getData_size());
-								System.out.println("The LINK TO IMAGE IS:" + m.getLink());
-								String s11 = m.getLink();
-
-								int counter = 0;
-								System.out.println(s11);
-								s11 = s11.substring(7);
-								System.out.println(s11);
-								String IMG = getServletContext().getRealPath("") + File.separator + s11;
-								if (m.getLink().equals("HALAMB\\upload_images\\Default\\unknown.jpg")) {
-									System.out.println("yes");
-									flag1 = true;
-								}
+				USER_INFO u=new USER_INFO();
+				String queryString="from USER_INFO where email='"+session1_f+"'";
+				User_insert_hibernate s=new User_insert_hibernate();
+				u=s.UserLogin(queryString);
+				System.out.println("Your pass word is"+u.getPass());
+String folder =u.getUser_id()+"."+u.getUser_name()+File.separator+"profile_pic";
+System.out.println("YOUR FOLDER IS"+folder);
+			 	
+			 	queryString="from User_profile_pic where user_id='"+u.getUser_id()+"'";
+			
+			 	User_profile_pic p=new User_profile_pic();
+			 	try
+				{//	
+			 		
+						Session session112=factory.getCurrentSession();
+					session112.beginTransaction();
+					System.out.println("Testsdfsfssdfsd123");
+					Query q=session112.createQuery(queryString);
+					q.setMaxResults(1);
+					user= (ArrayList) q.list();
+					System.out.println("hello the size is:"+user.size());
+					System.out.println("Test12345");
+				
+					if(user!=null && user.size()>0)
+					{
+						for(int i1=0;i1<user.size();i1++)
+						{
+							User_profile_pic m=(User_profile_pic)user.get(i1);
+							System.out.println("THE m.getImage Name is"+m.getData_size());
+							System.out.println("The LINK TO IMAGE IS:"+m.getLink());
+							String s11=m.getLink();
+							
+							int counter = 0;
+							System.out.println(s11);
+							s11=s11.substring(7);
+							System.out.println(s11);
+							String IMG=getServletContext().getRealPath("") + File.separator +s11;
+							if(m.getLink().equals("HALAMB\\upload_images\\Default\\unknown.jpg"))
+							{
+								System.out.println("yes");
+								flag1=true;
 							}
-
 						}
-
-					} catch (Exception e) {
+						
+					
 					}
-		%>
+					
+				}catch(Exception e){}
+
+
+%>
 
 
 
 
 		<div class="blackStripe clearfix" id="secondaryMenu">
 			<p>
-				<%=u.getEmail()%>
+				<%=u.getEmail() %>
 				| <a href="http://www.HALAMBs.com/profiles/hasnain123"><b>My
 						profile</b></a> | <a href="/account"><b>My account</b></a> | <a
 					href="Logout"><b>Sign out</b></a>
@@ -227,22 +236,17 @@ com.webmedia.services.DBService,
 					<h3>Account status</h3>
 					<div class="contentbox">
 						<ul>
-							<li><strong>Email:</strong> <%
- 	if (u.getVarified() != 1) {
- %> <a class="redText" href="email_verification.jsp">
-									unverified</a> <%
- 	} else {
- %> verified <%
- 	}
- %></li>
-							<li><strong>Identity:</strong> <%
- 	if (flag1 == true) {
- %> <a
-								class="redText" href="profile_pic.jsp"> unerified</a> <%
- 	} else {
- %> verified <%
- 	}
- %></li>
+							<li><strong>Email:</strong> <%if(u.getVarified()!=1){
+            %> <a class="redText" href="email_verification.jsp">
+									unverified</a> <%  
+              }
+              else
+              {%> verified <%  
+              }
+              %></li>
+							<li><strong>Identity:</strong> <%if(flag1==true){ %> <a
+								class="redText" href="profile_pic.jsp"> unerified</a> <%}else
+                                	{%> verified <%} %></li>
 							<li><strong>Type:</strong> regular account (<a
 								class="redText" href="/account/request_pro_account">request
 									a pro account</a>)</li>
@@ -346,17 +350,17 @@ com.webmedia.services.DBService,
 							</div>
 						</form>
 						<%
-							if (u.getVarified() != 1) {
-						%>
+      if(u.getVarified()!=1)
+      {
+    	  
+      %>
 
 						<p>
 							Your email has not been validated yet. Please validate it.<br>
 							A validated email is requested to create your profile page and
 							receive notifications on your profile.
 						</p>
-						<%
-							}
-						%>
+						<%} %>
 					</div>
 
 				</div>
@@ -365,11 +369,16 @@ com.webmedia.services.DBService,
 		</div>
 		<!-- #main -->
 		<%
-			destroy();
+				
+				
+				
+		destroy();
+		
+		}
+		
+	}//else-54
 
-				}
-
-			} //else-54
+   	
 		%>
 
 		<footer>
@@ -393,11 +402,7 @@ com.webmedia.services.DBService,
 
 	<script
 		src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script>
-		window.jQuery
-				|| document
-						.write('<script src="http://static.HALAMBs.com/v2/js/libs/jquery-1.7.2.min.js"><\/script>')
-	</script>
+	<script>window.jQuery || document.write('<script src="http://static.HALAMBs.com/v2/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
 
 	<script src="http://static.HALAMBs.com/v2/js/script.js?v=14"></script>

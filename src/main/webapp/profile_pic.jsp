@@ -35,7 +35,7 @@
 org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
-   org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
+  com.webmedia.services.DBService, java.io.IOException,
  javax.imageio.ImageIO,
  java.io.File,
  java.awt.image.BufferedImage;"%>
@@ -43,12 +43,7 @@ org.hibernate.Query,
 	<% ArrayList user = null;
 	HttpSession session11=request.getSession();
 	User_insert_hibernate h;
-	AnnotationConfiguration config1=new AnnotationConfiguration();
-	config1.addAnnotatedClass(User_profile_pic.class);
-	config1.configure("hibernate.cfg.xml");
-	System.out.println("build session factory");
-	SessionFactory factory=config1.buildSessionFactory();
-	
+	SessionFactory factory = DBService.getFacotorySession();
 	IMAGE_DATA i;
 	USER_INFO u;
 	int image_id;

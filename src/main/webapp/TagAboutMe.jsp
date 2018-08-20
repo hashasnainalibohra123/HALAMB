@@ -12,124 +12,88 @@
 		<div class="tabs">
 			<%@ page
 				import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA, java.util.ArrayList,
-org.hibernate.Query,
- org.hibernate.Session,
-  org.hibernate.SessionFactory,
-   org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
+ java.io.IOException,
  javax.imageio.ImageIO,java.util.Calendar,
- java.io.File,com.webmedia.model.User_profile_pic,
- java.awt.image.BufferedImage;"%>
+ java.io.File,com.webmedia.model.User_profile_pic"%>
 			<%
-String user=request.getParameter("friend_id");
-try{Thread.sleep(5000);}catch(Exception e){}
-if(user.equals("abc")){
-%>
+				String user = request.getParameter("friend_id");
+				try {
+					Thread.sleep(5000);
+				} catch (Exception e) {
+				}
+				if (user.equals("abc")) {
+			%>
 			<font color="red"><strong>User ADSexists</strong></font>
 			<%
-}else{
-%>
+				} else {
+			%>
 			<font color="green"><strong>User ss available</strong></font>
 			<%
-}
-%>
+				}
+			%>
 			<%
-HttpSession session_T=request.getSession(false);
-String profile_id=(String)session_T.getAttribute("profile_id");
-String flag1=(String)session_T.getAttribute("flag");
+				HttpSession session_T = request.getSession(false);
+				String profile_id = (String) session_T.getAttribute("profile_id");
+				String flag1 = (String) session_T.getAttribute("flag");
 
-		User_insert_hibernate h;
-		IMAGE_DATA i;
-		USER_INFO u;
-		User_profile_pic U_pic;
-		
-		String session1,session2;
-		
-		String folder;
-		if(profile_id=="" || profile_id==null)
-		{
-			System.out.println("profile_id is NuLL");
-			
-		}
-		String friend_id=request.getParameter("friend_id");
-		if(friend_id=="" || friend_id==null)
-		{
-			System.out.println("friend_id is NuLL");
-			
-		}
-		else
-		{
-			System.out.println("friend_id is not  NuLL              ;;;;;;;"+friend_id);
-		}
-		System.out.println("TESR");
-		// Creates two calendars instances
-        Calendar cal1 = Calendar.getInstance();
-        Calendar cal2 = Calendar.getInstance();
-      
-		if(session_T==null)
-		{
-			
-			
-			System.out.println("You have to login first");
-	  
-		
-			//getServletContext().getRequestDispatcher("/login.html").forward(request, response);
-			destroy();
-			
-		}
-		else
-		{
-			
-			session1=(String) session_T.getAttribute("email");
-			 session2=(String) session_T.getAttribute("password");
-			 System.out.println();
-			 System.out.println("this is IN THE USER_UPLOAD_IMAGES          "+session1);
-			 System.out.println("this is IN THE USER_UPLOAD_IMAGES"+session2);
-			 if(session1==null &&  session2==null)
-			{		System.out.println("In the Upload Area "+session1+"   "+session2);
-			getServletContext().getRequestDispatcher("/login.html").forward(request, response);
-		}
-			 String queryString="";
-			 if(friend_id!=null && friend_id!="")
-			 queryString="from USER_INFO where user_id='"+friend_id+"'";
-			 else{
-				 queryString="from USER_INFO where email='"+session1+"'";
-			 }
-			 
-			
-			 h=new User_insert_hibernate();
-			 System.out.println("HELLLLLLO");
-			 u=h.UserLogin(queryString);
-			  Date d1=new Date();
-			  Date d2=u.getSignupdate();
-		        // Set the date for both of the calendar instance
-		        cal1.set(d1.getYear(),d1.getMonth(),d1.getDay());
-		        System.out.println("d1.getYear(),d1.getMonth(),d1.getDay()"+d1.getYear()+"   "+d1.getMonth()+"   "+d1.getDay());
-		        System.out.println("d2.getYear(),d2.getMonth(),d2.getDay()"+d2.getYear()+"    "+d2.getMonth()+"   "+d2.getDay());
-		        cal2.set(d2.getYear(), d2.getMonth(), d1.getDay());
-		        System.out.println((int)( (d1.getTime() - d2.getTime()) / (1000 * 60 * 60 * 24)));
-			 U_pic=h.Getting_Object_pro("from User_profile_pic where user_id='"+u.getUser_id()+"'");
+				User_insert_hibernate h;
+				IMAGE_DATA i;
+				USER_INFO u;
+				User_profile_pic U_pic;
+
+				String session1, session2;
+
+				String folder;
+				String friend_id = request.getParameter("friend_id");
+				// Creates two calendars instances
+
+				if (session_T == null) {
+
+					getServletContext().getRequestDispatcher("/login.html").forward(request, response);
+					destroy();
+
+				} else {
+
+					session1 = (String) session_T.getAttribute("email");
+					session2 = (String) session_T.getAttribute("password");
+					if (session1 == null && session2 == null) {
+						getServletContext().getRequestDispatcher("/login.html").forward(request, response);
+					}
+					String queryString = "";
+						queryString = "from USER_INFO where email='" + session1 + "'";
+
+					h = new User_insert_hibernate();
+					System.out.println("HELLLLLLO");
+					u = h.UserLogin(queryString);
+					System.out.println(u);
+					Date d1 = new Date();
+					Date d2 = u.getSignupdate();
+					System.out.println("SignUpDate ="+u.getAge());
+					// Set the date for both of the calendar instance
+					U_pic = h.Getting_Object_pro("from User_profile_pic where user_id='" + u.getUser_id() + "'");
 			%>
 
 			<div class="tabs">
 
 				<div id="tabAboutMe" class="tab">
 
-					<%if(flag1!=null || !flag1.equals("")){
-						if(flag1.equals("false"))
-						{ %><div class="profile-actions">
+					<%
+						if (flag1 != null || !flag1.equals("")) {
+								if (flag1.equals("false")) {
+					%><div class="profile-actions">
 						<a id="profile-edit" class="button iconBtn edit first" href="#">
 							&nbsp;&nbsp;&nbsp; </a><a class="button iconBtn settings last"
 							href="#"> &nbsp;&nbsp;&nbsp; </a>
 					</div>
-					<%}
-						
-					
-					
-					} %>
+					<%
+						}
+
+							}
+					%>
 
 					<div class="column_left">
 						<div id="profilePic">
-							<img src=\<%=U_pic.getLink()%> width="242" height="242"
+							<img src=\ <%=U_pic.getLink()%> width="242" height="242"
 								align="left" style="margin-right: 20px" />
 							<div id="profilePicEdit">
 								<a href="profile_pic.jsp">Change your profile thumb</a>
@@ -144,8 +108,8 @@ String flag1=(String)session_T.getAttribute("flag");
 						<div class="column0" style="">
 							<p>
 								<strong>Signed up:</strong>
-								<%=u.getSignupdate() %>
-								(<%=(int)( (d1.getTime() - d2.getTime()) / (1000 * 60 * 60 * 24)) %>
+								<%=u.getSignupdate()%>
+								(<%=(int) ((d1.getTime() - d2.getTime()) / (1000 * 60 * 60 * 24))%>
 								days ago)
 							</p>
 							<p>
@@ -155,16 +119,16 @@ String flag1=(String)session_T.getAttribute("flag");
 								<strong>Profile hits:</strong> 0
 							</p>
 							<p id="profile_info_sex">
-								<strong>Gender:</strong><span><%=u.getSex() %></span>
+								<strong>Gender:</strong><span><%=u.getSex()%></span>
 							</p>
 							<p id="profile_info_age">
-								<strong>Age:</strong><span><%=u.getAge() %> years old</span>
+								<strong>Age:</strong><span><%=u.getAge()%> years old</span>
 							</p>
 							<p id="profile_info_country">
-								<strong>Country:</strong><span><%=u.getCountry() %></span>
+								<strong>Country:</strong><span><%=u.getCountry()%></span>
 							</p>
 							<p id="profile_info_region">
-								<strong>Region:</strong><span><%=u.getRegion() %></span>
+								<strong>Region:</strong><span><%=u.getRegion()%></span>
 							</p>
 							<p id="profile_info_city">
 								<strong>City:</strong><span><%=u.getCity()%></span>
@@ -233,25 +197,23 @@ String flag1=(String)session_T.getAttribute("flag");
 
 						</div>
 
-						<%	if(u.getAboutme()!=null)
-						{
-					%>
+						<%
+							if (u.getAboutme() != null) {
+						%>
 						<p id="profile_info_sex">
 							<strong>About Me:</strong><span id="abt"><%=u.getAboutme()%></span>
 						</p>
-						<%}
-					else
-					{
+						<%
+							} else {
 						%>
 						<p id="profile_info_sex">
 							<strong>About Me:</strong><span><div id="abt"></div></span>
 						</p>
 						<%
-					}
-					if(flag1!=null || !flag1.equals("")){
-						if(flag1.equals("false"))
-						{
-	%>
+							}
+								if (flag1 != null || !flag1.equals("")) {
+									if (flag1.equals("false")) {
+						%>
 						<p class="aboutme missing">
 							<span class="value"></span> <span class="tip"> <strong>Tip:</strong>
 								<span>Click on this box to write something about profile
@@ -261,13 +223,18 @@ String flag1=(String)session_T.getAttribute("flag");
 								value="Save" id="myBtn" onclick="displayDate();" />
 							</span>
 						</p>
-						<%	}}%>
+						<%
+							}
+								}
+						%>
 					</div>
 
 				</div>
 			</div>
 
-			<%} %>
+			<%
+				}
+			%>
 		</div>
 	</div>
 </body>

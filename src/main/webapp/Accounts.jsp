@@ -1,3 +1,4 @@
+<%@page import="com.HALAMB.Accounts"%>
 <%@page import="com.webmedia.services.DBService"%>
 <%@page import="com.webmedia.model.Privacy"%>
 <%@page import="com.webmedia.model.USER_EXTRA_INFO"%>
@@ -99,17 +100,11 @@
           <a class="image" href="http://localhost:8080/HALAMB/Download.html" target="_blank"><img src="E:\HOT\h5.jpg"  /></a>
           <a class="image" href="http://localhost:8080/HALAMB/Download.html" target="_blank"><img src="E:\HOT\h6.jpg"  /></a>
        -->
-		<%@ page
-			import="com.webmedia.model.USER_INFO,com.HALAMB.User_insert_hibernate,com.webmedia.model.IMAGE_DATA, java.util.ArrayList,
-org.hibernate.Query,
- org.hibernate.Session,
-  org.hibernate.SessionFactory, java.io.IOException,
-   com.webmedia.services.DBService,
- javax.imageio.ImageIO,com.webmedia.model.Favorate_list,
- java.io.File,com.webmedia.model.User_profile_pic,com.webmedia.model.USER_EXTRA_INFO,com.webmedia.model.USER_LANGUAGE"%>
 
+ <%@ include file="ImportClasses.jsp" %>
 
 		<%
+		Accounts ac = new Accounts();
 			ArrayList user = null, user2 = null, user_l = null;
 			boolean flag = false;
 			//.....boolean for ID checking........//
