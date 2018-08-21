@@ -83,47 +83,30 @@
           <a class="image" href="http://localhost:8080/HALAMB/Download.html" target="_blank"><img src="E:\HOT\h4.jpg"  /></a>
           <a class="image" href="http://localhost:8080/HALAMB/Download.html" target="_blank"><img src="E:\HOT\h5.jpg"  /></a>
           <a class="image" href="http://localhost:8080/HALAMB/Download.html" target="_blank"><img src="E:\HOT\h6.jpg"  /></a>
-       --> <%ArrayList user= null,user2=null;
-		boolean flag=false;
-       
-  	 String session1_f,session2_f;
-	 HttpSession session_f=request.getSession(false);
-	 System.out.println("TEST "+session_f);
-	
-	 //......ANNOTATION CONFIGURATION.............//
-		//new SchemaExport(config).create(true,true);
-		SessionFactory factory= DBService.getFacotorySession();
-	
-	 
-	 
-	 
-	 if(session_f==null)
-	{
-		
-		
-		System.out.println("You have to login first");
-		HttpSession session123=request.getSession();
-//session123.setAttribute("from","upload" );
-//session.setAttribute("password",r.getPass());
+       --> <%
+ 	ArrayList user = null, user2 = null;
+ 	boolean flag = false;
 
+ 	HttpSession alreadyExistSession = request.getSession(false);
 
-	
-	//	getServletContext().getRequestDispatcher("/login.html").forward(request, response);
-		destroy();
-		
-	}
-	else
-	{
-		
-		session1_f=(String) session.getAttribute("email");
-		 session2_f=(String) session.getAttribute("password");
-			HttpSession session123=request.getSession();
-			session123.setAttribute("from","home" ); 
-		if(session1_f==null &&  session2_f==null)
-		{		System.out.println("In the Upload Area "+session1_f+"   "+session2_f);
-	
-		
-		%>
+ 	SessionFactory factory = DBService.getFacotorySession();
+
+ 	if (alreadyExistSession == null) {
+
+ 		System.out.println("You have to login first");
+ 		HttpSession session123 = request.getSession();
+ 		//session123.setAttribute("from","upload" );
+ 		//session.setAttribute("password",r.getPass());
+
+ 		//	getServletContext().getRequestDispatcher("/login.html").forward(request, response);
+ 		destroy();
+
+ 	} else {
+
+ 		USER_INFO loggedInUser = (USER_INFO) session.getAttribute("loggedInUser");
+ 		alreadyExistSession.setAttribute("from", "home");
+ 		if (loggedInUser == null ) {
+ %>
 
 
 		<div class="blackStripe clearfix" id="secondaryMenu">
@@ -153,30 +136,19 @@
 
 
 		<%
-	//	getServletContext().getRequestDispatcher("/login.html").forward(request, response);
+		getServletContext().getRequestDispatcher("/login.html").forward(request, response);
 	}
 		else
 		{
 		//getServletContext().getRequestDispatcher("/Upload_Image.jsp").forward(request, response);
 				flag=true;
-
-
-				USER_INFO u=new USER_INFO();
-				String queryString="from USER_INFO where email='"+session1_f+"'";
-				User_insert_hibernate s=new User_insert_hibernate();
-				u=s.UserLogin(queryString);
-				System.out.println("Your pass word is"+u.getPass());
-
-
-
-
 %>
 
 
 
 		<div class="blackStripe clearfix" id="secondaryMenu">
 			<p>
-				<a href="Logout"><b>Logout</b></a> | <a href="profiles.jsp"><b><%=u.getEmail() %></b></a>
+				<a href="Logout"><b>Logout</b></a> | <a href="profiles.jsp"><b><%=loggedInUser.getEmail() %></b></a>
 			</p>
 			<ul>
 				<li><strong><a href="/c/Amateur-17">Real Amateur
@@ -198,246 +170,170 @@
 
 
 		<%
-				
-				
-				
-		destroy();
-		
-		}
-		
-	}//else-54
+			destroy();
 
-   	
-		//>>>??>>>>>>>>>>>>>>>>>>>>??>>COUNT SESSION<<??<<<<<<<<<<<<<<<<??<<<<<<<<<<<<
+				}
 
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				HttpSession session_count=request.getSession(true);
-		int count=1;
-		String count_s=null;
-		String str;
-		int set_jump=0;
-		str=request.getParameter("k");
-		
-		if(session_count.isNew())
-		{count=1;
-			System.out.println("this is newly create session  "+count);			
-		}
-		else
-		{
-			count_s=(String ) session_count.getAttribute("count_video");
-			String count_s1=(String ) session_count.getAttribute("password");
-			String count_s2=(String ) session_count.getAttribute("email");
-			
-			System.out.println("THIS IS COUNT BEFORE UPDATE GETPARAMETER    "+count_s);	
-			System.out.println("THIS IS COUNT BEFORE UPDATE GETPARAMETER    "+count_s1);	
-			System.out.println("THIS IS COUNT BEFORE UPDATE GETPARAMETER    "+count_s2);	
-			System.out.println("THIS IS COUNT BEFORE UPDATE GETPARAMETER    "+str);	
-					if(count_s!=null)
-					{
-		count=Integer.parseInt(count_s);
-		//set_jump=count;
-	
-					System.out.println("This is Video sesssion SET JUMP  "+count);
-					}
-					else
-					{
-						System.out.println("COUNT IS NULL SO ");
-						count=1;
-						
-					}
-		}
-		
-		
-		
-		
-		
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       try
-		{//	
-	
-		Session session1=factory.getCurrentSession();
-		session1.beginTransaction();
-			%>
+			} //else-54
+
+			HttpSession session_count = request.getSession(true);
+			int count = 1;
+			String count_s = null;
+			String str;
+			int set_jump = 0;
+			str = request.getParameter("k");
+
+			if (session_count.isNew()) {
+				count = 1;
+				System.out.println("this is newly create session  " + count);
+			} else {
+				count_s = (String) session_count.getAttribute("count_video");
+				String count_s1 = (String) session_count.getAttribute("password");
+				String count_s2 = (String) session_count.getAttribute("email");
+
+				System.out.println("THIS IS COUNT BEFORE UPDATE GETPARAMETER    " + count_s);
+				System.out.println("THIS IS COUNT BEFORE UPDATE GETPARAMETER    " + count_s1);
+				System.out.println("THIS IS COUNT BEFORE UPDATE GETPARAMETER    " + count_s2);
+				System.out.println("THIS IS COUNT BEFORE UPDATE GETPARAMETER    " + str);
+				if (count_s != null) {
+					count = Integer.parseInt(count_s);
+					//set_jump=count;
+
+					System.out.println("This is Video sesssion SET JUMP  " + count);
+				} else {
+					System.out.println("COUNT IS NULL SO ");
+					count = 1;
+
+				}
+			}
+
+			try {//	
+
+				Session session1 = factory.getCurrentSession();
+				session1.beginTransaction();
+		%>
 		<h2>
 			<center>VIDEOS</center>
 		</h2>
 		<%
-			Query q=session1.createQuery("from IMAGE_DATA where formate='video/mp4'");
-			int count_max = ((Long)session1.createQuery("select count(*) from IMAGE_DATA where formate='video/mp4'").uniqueResult()).intValue();
-			System.out.println("This is the NUMBER OF ROWS BY QUERY   "+count_max+"   hello HIBYE  :::: "+count);
-			
-			
-			if(session_count.isNew())
-			{	}
-			else
-			{
-			
-			count_s=(String ) session_count.getAttribute("count_video");
-			System.out.println("IN THE ELSE OF COUNT_S"+count_s);
-			}
-if(count_s==null || str!=null)	
-{				
-		if(str!=null)
-		{
-			if(str!=null)
-				 set_jump=Integer.parseInt(str);
-			
-			if(set_jump==1)
-			
-				{
-				q.setFirstResult(set_jump-1);
-				System.out.println("IN THE IF SET_JUMP:::::::::::"+set_jump);
+			Query q = session1.createQuery("from IMAGE_DATA where formate='video/mp4'");
+				int count_max = ((Long) session1
+						.createQuery("select count(*) from IMAGE_DATA where formate='video/mp4'").uniqueResult())
+								.intValue();
+				System.out.println(
+						"This is the NUMBER OF ROWS BY QUERY   " + count_max + "   hello HIBYE  :::: " + count);
+
+				if (session_count.isNew()) {
+				} else {
+
+					count_s = (String) session_count.getAttribute("count_video");
+					System.out.println("IN THE ELSE OF COUNT_S" + count_s);
 				}
-			else
-			{
-				int v;
-				v=4;
-				v=((set_jump-1)*4)+1;
-				q.setFirstResult(v-1);
-				System.out.println("IN THE IF SET_JUMP:::::::::::else"+set_jump);
-				
-			}
-		
-			System.out.println("this is<<<<<<<<<   SET_JUMP>>>>>>>>>>>"+set_jump*4);
-		}
-		else
-		{
-			System.out.println("IN THE ELSE");
-			
-			set_jump=1;
-			q.setFirstResult(set_jump-1);
-		}
+				if (count_s == null || str != null) {
+					if (str != null) {
+						if (str != null)
+							set_jump = Integer.parseInt(str);
 
-}
-else
-{
-	count=Integer.parseInt(count_s);
-	set_jump=count;
-	if(set_jump==1)
-		
-	{
-	q.setFirstResult(set_jump-1);
-	System.out.println("IN THE IF SET_JUMP:::::::::::"+set_jump);
-	}
-else
-{
-	int v;
-	v=4;
-	v=((set_jump-1)*4)+1;
-	q.setFirstResult(v-1);
-	System.out.println("IN THE IF SET_JUMP:::::::::::else"+set_jump);
-	
-}
+						if (set_jump == 1)
 
-System.out.println("this is<<<<<<<<<   SET_JUMP>>>>>>>>>>>"+set_jump*4);
+						{
+							q.setFirstResult(set_jump - 1);
+							System.out.println("IN THE IF SET_JUMP:::::::::::" + set_jump);
+						} else {
+							int v;
+							v = 4;
+							v = ((set_jump - 1) * 4) + 1;
+							q.setFirstResult(v - 1);
+							System.out.println("IN THE IF SET_JUMP:::::::::::else" + set_jump);
 
+						}
 
-	
-				System.out.println("This is Video sesssion SET JUMP123  "+set_jump);
-	}
-		q.setMaxResults(4);
-			count=count+4;
-			if(count>=count_max)
-			{
-				count=count_max-count;
-		//		count++;
-			}
-			
-			
-			String count_session=set_jump+"";
-			System.out.println("This is COUNT   "+count_session);
-			session_count.setAttribute("count_video",count_session);
-			System.out.println("THIS IS AFTER SETATTRIB0  ");
-			try
-			{
-			user=(ArrayList)q.list();
-			
-			}
-			catch(Exception e)
-			{System.out.println("Hello due to"+e);
-			}
-				user=(ArrayList) q.list();
-System.out.println("This is error");
-		System.out.println("hello the size is:"+user.size());
-		
-		
-		if(user!=null && user.size()>0)
-		{
-			for(int i=0;i<user.size();i++)
-			{
-				IMAGE_DATA m=(IMAGE_DATA)user.get(i);
-				System.out.println("THE m.getImage Name is"+m.getImage_name());
-				System.out.println("The LINK TO IMAGE IS:"+m.getLink());
-				%> <A href="Download_side_video.jsp?Image_Id=<%=m.getImage_id() %>"><video
-				src="\<%=m.getLink() %>" width="200" height="200" /></A> <%}
-			%> <br />
+						System.out.println("this is<<<<<<<<<   SET_JUMP>>>>>>>>>>>" + set_jump * 4);
+					} else {
+						System.out.println("IN THE ELSE");
+
+						set_jump = 1;
+						q.setFirstResult(set_jump - 1);
+					}
+
+				} else {
+					count = Integer.parseInt(count_s);
+					set_jump = count;
+					if (set_jump == 1)
+
+					{
+						q.setFirstResult(set_jump - 1);
+						System.out.println("IN THE IF SET_JUMP:::::::::::" + set_jump);
+					} else {
+						int v;
+						v = 4;
+						v = ((set_jump - 1) * 4) + 1;
+						q.setFirstResult(v - 1);
+						System.out.println("IN THE IF SET_JUMP:::::::::::else" + set_jump);
+
+					}
+
+					System.out.println("this is<<<<<<<<<   SET_JUMP>>>>>>>>>>>" + set_jump * 4);
+
+					System.out.println("This is Video sesssion SET JUMP123  " + set_jump);
+				}
+				q.setMaxResults(4);
+				count = count + 4;
+				if (count >= count_max) {
+					count = count_max - count;
+					//		count++;
+				}
+
+				String count_session = set_jump + "";
+				System.out.println("This is COUNT   " + count_session);
+				session_count.setAttribute("count_video", count_session);
+				System.out.println("THIS IS AFTER SETATTRIB0  ");
+				try {
+					user = (ArrayList) q.list();
+
+				} catch (Exception e) {
+					System.out.println("Hello due to" + e);
+				}
+				user = (ArrayList) q.list();
+				System.out.println("This is error");
+				System.out.println("hello the size is:" + user.size());
+
+				if (user != null && user.size() > 0) {
+					for (int i = 0; i < user.size(); i++) {
+						IMAGE_DATA m = (IMAGE_DATA) user.get(i);
+						System.out.println("THE m.getImage Name is" + m.getImage_name());
+						System.out.println("The LINK TO IMAGE IS:" + m.getLink());
+		%> <A href="Download_side_video.jsp?Image_Id=<%=m.getImage_id()%>"><video
+				src="\<%=m.getLink()%>" width="200" height="200" /></A> <%
+ 	}
+ %> <br />
 		<%
 			}
-		 int maxi=count_max/4;
-		 if(count_max%4==0)
-		 {
-		    	maxi=count_max/4;
-		 }
-		 else
-		 {
-		   	maxi=maxi+1;
-			
-			
-		}
-		System.out.println("this is MAXI >>>>>>>>>>>"+maxi);
-		for(int k=1;k<=maxi;k++)
-		{
-		if(set_jump==k)
-		{
-			%> <a href="HOME.jsp?k=<%=k %>"><input type="button"
-			value=<%=k %> disabled="disabled"></a> <%
-			
-		}
-		else
-		{
-		%> <a href="HOME.jsp?k=<%=k %>"><input type="button" value=<%=k %>></a>
-		<%
-		}}
-		
-		session1.getTransaction().commit();
-		
-		}
-		catch(Exception e)
-		{
-			
-			System.out.println("Error  due to asf "+e);
-		}
-     
-     %>
+				int maxi = count_max / 4;
+				if (count_max % 4 == 0) {
+					maxi = count_max / 4;
+				} else {
+					maxi = maxi + 1;
+
+				}
+				System.out.println("this is MAXI >>>>>>>>>>>" + maxi);
+				for (int k = 1; k <= maxi; k++) {
+					if (set_jump == k) {
+		%> <a href="HOME.jsp?k=<%=k%>"><input type="button"
+			value=<%=k%> disabled="disabled"></a> <%
+ 	} else {
+ %> <a href="HOME.jsp?k=<%=k%>"><input type="button"
+			value=<%=k%>></a> <%
+ 	}
+ 		}
+
+ 		session1.getTransaction().commit();
+
+ 	} catch (Exception e) {
+
+ 		System.out.println("Error  due to asf " + e);
+ 	}
+ %>
 
 
 		<h2>

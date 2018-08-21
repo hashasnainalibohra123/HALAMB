@@ -15,7 +15,7 @@ org.hibernate.Query,
  org.hibernate.Session,
   org.hibernate.SessionFactory,
    org.hibernate.cfg.AnnotationConfiguration, java.io.IOException,
- javax.imageio.ImageIO,com.HALAMB.Favorate_video_List,
+ javax.imageio.ImageIO,com.webmedia.model.Favorate_video_List,
  java.io.File,com.webmedia.model.Comment_Table,com.webmedia.model.Favorate_list,
  java.awt.image.BufferedImage;"%>
 

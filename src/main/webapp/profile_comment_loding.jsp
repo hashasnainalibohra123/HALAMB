@@ -16,8 +16,7 @@ org.hibernate.Query,
   org.hibernate.SessionFactory,
    com.webmedia.services.DBService, java.io.IOException,
  javax.imageio.ImageIO,com.webmedia.model.PROFILE_COMMENT_TABLE,
- java.io.File,com.webmedia.model.Comment_Table1,
- java.awt.image.BufferedImage;"%>
+ java.io.File,com.webmedia.model.Comment_Table"%>
 
 	<%
 		ArrayList user = null, user1 = null;

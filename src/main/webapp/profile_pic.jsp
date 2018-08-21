@@ -37,8 +37,7 @@ org.hibernate.Query,
   org.hibernate.SessionFactory,
   com.webmedia.services.DBService, java.io.IOException,
  javax.imageio.ImageIO,
- java.io.File,
- java.awt.image.BufferedImage;"%>
+ java.io.File"%>
 
 	<% ArrayList user = null;
 	HttpSession session11=request.getSession();
@@ -144,7 +143,7 @@ org.hibernate.Query,
               }
               %></li>
 
-							<%String find="from User_profile_pic where user_id='"+u.getUser_id()+"'";
+							<%String find="from User_profile_pic where user_id="+u.getUser_id()+"";
                                 Session session1122=factory.getCurrentSession();
             					session1122.beginTransaction();
             					System.out.println("Testsdfsfssdfsd123");

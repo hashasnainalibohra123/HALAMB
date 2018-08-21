@@ -31,37 +31,20 @@ import com.webmedia.services.DBService;
 @MultipartConfig(fileSizeThreshold=1024*1024*2, // 2MB
 maxFileSize=1024*1024*10,      // 10MB
 maxRequestSize=1024*1024*50)   // 50MB
-/**
- * Servlet implementation class Upload_Profile_pic
- */
+
 public class Upload_Profile_pic extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
 	public Upload_Profile_pic() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-
-
-	String session1,session2;
+	String emailFromSession,passwordFromSession;
 
 	//****************FOLDER FOR USER*********************//
 	String folder;
-	int y;
+	boolean isAuthenticate;
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {  
 
 		response.setContentType("text/html");  
@@ -72,18 +55,14 @@ public class Upload_Profile_pic extends HttpServlet {
 
 		SessionFactory factory=DBService.getFacotorySession();
 
-		HttpSession session=request.getSession(false);
+		HttpSession session = request.getSession(false);
 
 		boolean pass=false;
 
-		String delete_file="";
 
-		if(session==null)
+		if(session == null)
 
 		{
-			System.out.println("You have to login first");
-			HttpSession session123=request.getSession();
-			session123.setAttribute("from","upload" ); 
 			getServletContext().getRequestDispatcher("/login.html").forward(request, response);
 			destroy();
 		}
@@ -91,34 +70,26 @@ public class Upload_Profile_pic extends HttpServlet {
 		else
 
 		{
-			System.out.println("YOU S SESSION IS    ");
-			session1=(String) session.getAttribute("email");
-			session2=(String) session.getAttribute("password");
-			HttpSession session123=request.getSession();
-			session123.setAttribute("from","upload" ); 
-			System.out.println("In the Upload Area "+session1+"   "+session2);
-
-			if(session1==null &&  session2==null)
+			emailFromSession = (String) session.getAttribute("email");
+			passwordFromSession = (String) session.getAttribute("password");
+			if(emailFromSession==null &&  passwordFromSession==null)
 			{	
-				System.out.println("In the Upload Area "+session1+"   "+session2);
 				getServletContext().getRequestDispatcher("/login.html").forward(request, response);
 				destroy();
 			}
 			else
 			{
-				y=9;
+				isAuthenticate = true;
 			}
 		}
 
-		if(y==9)
+		if(isAuthenticate)
 
 		{
-
 			USER_INFO u=new USER_INFO();
-			String queryString="from USER_INFO where email='"+session1+"'";
+			String queryString="from USER_INFO where email='"+emailFromSession+"'";
 			User_insert_hibernate s=new User_insert_hibernate();
 			u=s.UserLogin(queryString);
-			System.out.println("Your pass word is"+u.getPass());
 			folder =u.getUser_id()+"."+u.getUser_name()+File.separator+"profile_pic";
 
 			//***************CREATING DIRECOTORY*****************//
@@ -153,7 +124,7 @@ public class Upload_Profile_pic extends HttpServlet {
 
 
 			//check if already exist
-			queryString="from User_profile_pic where user_id='"+u.getUser_id()+"'";
+			queryString="from User_profile_pic where user_id="+u.getUser_id()+"";
 
 			try
 			{//	
